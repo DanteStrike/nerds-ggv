@@ -1,0 +1,29 @@
+{
+  "name": "nerds-ggv",
+  "version": "1.0.0",
+  "description": "BEM site + HTML/CSS(flex)/GULP",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanteStrike/nerds-ggv.git"
+  },
+  "author": "DanteStrike",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanteStrike/nerds-ggv/issues"
+  },
+  "homepage": "https://github.com/DanteStrike/nerds-ggv#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^5.0.0",
+    "rimraf": "^2.6.2"
+  }
+}
