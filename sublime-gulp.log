@@ -1,0 +1,18 @@
+Remember that you can report errors and get help in https://github.com/NicoSantangelo/sublime-gulp
+
+07-04-2018 17:53:
+C:\Users\ggevorkyan\AppData\Roaming\Sublime Text 3\Packages\Gulp\write_tasks_to_cache.js:31
+        throw ex;
+        ^
+
+Error: Cannot find module 'imagemin-pngquant'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (C:\Users\ggevorkyan\Desktop\Git_banch\HTML(basic)\nerds-ggv\.sublime-gulp-tmp.js:11:18)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)

@@ -1,96 +1,109 @@
 'use strict';
 
-let gulp = require('gulp');
-let watch = require('gulp-watch');
-let browserSync = require('browser-sync');
-let reload = browserSync.reload;
-let cssMin = require('gulp-clean-css');
-let jsMin = require('gulp-uglify');
-let autoPrefixer = require('gulp-autoprefixer');
-let rimraf = require('rimraf');
+const gulp = require('gulp');
+const watch = require('gulp-watch');
+const browserSync = require('browser-sync');
+const reload = browserSync.reload;
+const cssMin = require('gulp-clean-css');
+const autoPrefixer = require('gulp-autoprefixer');
+const jsMin = require('gulp-uglify');
+const imageMin = require('gulp-imagemin');
+const pngquant = require('imagemin-pngquant');
+const rigger = require('gulp-rigger');
+const rimraf = require('rimraf');
 
-let path = {
-    build: {
-        html: 'build/',
-        img: 'build/img/',
-        css: 'build/css/',
-        js: 'build/js/'
-    },
-    src: {
-        html: 'src/*.html',
-        img: 'src/img/*.*',
-        css: 'src/blocks/**/*.css',
-        js: 'src/blocks/**/*.js'
-    },
-    clean: './build'
+const path = {
+  public: {
+    html: 'public/',    
+    img: 'public/assets/img/',
+    css: 'public/assets/css/',
+    js: 'public/assets/js/'
+  },
+  src: {
+    html: 'src/*.html',
+    img: 'src/img/*.*',
+    cssAll: 'src/common.blocks/**/*.css', 
+    cssMain: 'src/css/style.css',
+    jsAll: 'src/common.blocks/**/*.js', 
+    jsMain: 'src/js/main.js'
+  },
+  clean: './public'
 };
 
-let config = {
-    server: {
-        baseDir: "./build"
-    },
-    tunnel: true,
-    host: 'localhost',
-    port: 9000,
-    logPrefix: "Frontend_Devil"
+const config = {
+  server: {
+    baseDir: './public'
+  },
+  tunnel: true,
+  host: 'localhost',
+  port: 9000,
+  logPrefix: "Frontend_DevilDante"
 };
 
-gulp.task('html:build', function () {
-    gulp.src(path.src.html) //Выберем файлы по нужному пути
-        .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
-        .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
-});
+gulp.task('html:public', function () {
+  return gulp.src(path.src.html) //Выберем файлы по нужному пути
+    .pipe(gulp.dest(path.public.html)) //Выплюнем их в папку public
+    .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
+    });
 
-gulp.task('js:build', function () {
-    gulp.src(path.src.js) //Найдем наш main файл
-        .pipe(jsMin()) //Сожмем наш js
-        .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
-        .pipe(reload({stream: true})); //И перезагрузим сервер
-});
+gulp.task('css:public', function () {
+  return gulp.src(path.src.cssMain) //Выберем наш css
+    .pipe(rigger(''))
+    .pipe(autoPrefixer()) //Добавим вендорные префиксы
+    .pipe(cssMin()) //Сожмем
+    .pipe(gulp.dest(path.public.css)) //И в public
+    .pipe(reload({stream: true}));
+    });
 
-gulp.task('css:build', function () {
-    gulp.src(path.src.css) //Выберем наш css
-        .pipe(autoPrefixer()) //Добавим вендорные префиксы
-        .pipe(cssMin()) //Сожмем
-        .pipe(gulp.dest(path.build.css)) //И в build
+gulp.task('js:public', function () {
+  return gulp.src(path.src.jsMain) //Найдем наш main файл
+    .pipe(rigger(''))
+    .pipe(jsMin()) //Сожмем наш js
+    .pipe(gulp.dest(path.public.js)) //Выплюнем готовый файл в public
+    .pipe(reload({stream: true})); //И перезагрузим сервер
+    });
+
+gulp.task('image:public', function () {
+    return gulp.src(path.src.img) //Выберем наши картинки
+        .pipe(imageMin({ //Сожмем их
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()],
+            interlaced: true
+        }))
+        .pipe(gulp.dest(path.public.img)) //И бросим в public/assets
         .pipe(reload({stream: true}));
-});
+    });
 
-gulp.task('image:build', function () {
-    gulp.src(path.src.img) //Выберем наши картинки
-        .pipe(gulp.dest(path.build.img)) //И бросим в build
-        .pipe(reload({stream: true}));
-});
-
-gulp.task('build', [
-    'html:build',
-    'js:build',
-    'css:build',
-    'image:build'
-]);
+gulp.task('public', [
+  'html:public',
+  'js:public',
+  'css:public',
+  'image:public'
+  ]);
 
 gulp.task('watch', function(){
-    watch([path.src.html], function(event, cb) {
-        gulp.start('html:build');
-    });
-    watch([path.src.css], function(event, cb) {
-        gulp.start('css:build');
-    });
-    watch([path.src.js], function(event, cb) {
-        gulp.start('js:build');
-    });
-    watch([path.src.img], function(event, cb) {
-        gulp.start('image:build');
-    });
+  return 
+  watch([path.src.html], function(event, cb) {
+    gulp.start('html:public');
+  });
+  watch([path.src.css], function(event, cb) {
+    gulp.start('css:public');
+  });
+  watch([path.src.js], function(event, cb) {
+    gulp.start('js:public');
+  });
+  watch([path.src.img], function(event, cb) {
+    gulp.start('image:public');
+  });
 });
 
 gulp.task('webserver', function () {
-    browserSync(config);
+  return browserSync(config);
 });
 
 gulp.task('clean', function (cb) {
-    rimraf(path.clean, cb);
+  return rimraf(path.clean, cb);
 });
 
-gulp.task('default', ['build', 'webserver', 'watch']);
-
+gulp.task('default', ['public', 'webserver', 'watch']);

@@ -1,0 +1,255 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"im",
+				"imageMin"
+			],
+			[
+				"d",
+				"div\tTag"
+			],
+			[
+				"st",
+				"style.css"
+			],
+			[
+				"ma",
+				"margin\tproperty"
+			],
+			[
+				"r",
+				"rigger"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Gulp",
+				"Gulp"
+			],
+			[
+				"Gul",
+				"Gulp: Show panel"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"gulp",
+				"Gulp"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 157.0,
+		"history":
+		[
+			"view.scope_name(view.sel()[0].begin())",
+			"sublime.log_commands(True)",
+			"stop",
+			"sublime.log_input(false)",
+			"  sublime.log_commands(True)",
+			"sublime.log_input(True)",
+			"afn_show_filenames"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv",
+		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/src",
+		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/src/common.blocks",
+		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/src/css"
+	],
+	"file_history":
+	[
+		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/src/catalog.html",
+		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/src/index.html",
+		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/gulpfile.js",
+		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/package.json",
+		"/C/Users/ggevorkyan/AppData/Roaming/Sublime Text 3/Packages/AutoFileName/autofilename.sublime-settings",
+		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/src/css/style.css",
+		"/C/Users/ggevorkyan/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/SL_3",
+		"/C/Users/ggevorkyan/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/ggevorkyan/AppData/Roaming/Sublime Text 3/Packages/User/TEST.txt",
+		"/C/Users/ggevorkyan/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/ggevorkyan/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/C/Users/ggevorkyan/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings"
+	],
+	"find":
+	{
+		"height": 33.0
+	},
+	"find_in_files":
+	{
+		"height": 145.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"alt+f",
+			"alt+a",
+			"alt+r",
+			"shift+space"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 33.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.69535197281,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.gulp_output":
+	{
+		"height": 170.0
+	},
+	"pinned_build_system": "",
+	"project": "Project.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 1,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 190.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
