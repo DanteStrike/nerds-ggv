@@ -143,19 +143,9 @@ gulp.task('public', [
 
 // OTHER
 gulp.task('watch', function(){
-  return
-  watch([path.src.html], function(event, cb) {
-    gulp.start('html:public');
-  });
-  watch([path.src.cssAll], function(event, cb) {
-    gulp.start('css:public');
-  });
-  watch([path.src.jsAll], function(event, cb) {
-    gulp.start('js:public');
-  });
-  watch([path.src.img], function(event, cb) {
-    gulp.start('image:public');
-  });
+  watch(path.src.html, ['html:public']);
+  watch(path.src.cssAll, ['css:public']);
+  watch(path.src.img, ['image:public']);
 });
 
 gulp.task('default', ['public', 'webserver', 'watch']);
