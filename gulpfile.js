@@ -92,10 +92,11 @@ gulp.task('css:collectStyle', function () {
     .pipe(importCss()) //Собрать
     .pipe(autoPrefixer())
     .pipe(csscomb())
-    .pipe(gulp.dest(path.src.cssMain + '_style')); //И в public
+    .pipe(gulp.dest(path.src.cssMain + '_style')); //Предпросмотр
 });
 
-gulp.task('css:minifyDeploy', function () {
+// Зависим от css:collectStyle
+gulp.task('css:public', ['css:collectStyle'], function () {
   return gulp.src(path.src.cssMain + '/_style/style.css') //Выберем наш css
     .pipe(cssMin())
     .pipe(gulp.dest(path.public.css)) //И в public
@@ -109,13 +110,13 @@ gulp.task('csscomb', function () {
 });
 
 // JS
-gulp.task('js:public', function () {
-  return gulp.src(path.src.jsMain) //Найдем наш main файл
-    .pipe(rigger(''))
-    .pipe(jsMin()) //Сожмем наш js
-    .pipe(gulp.dest(path.public.js)) //Выплюнем готовый файл в public
-    .pipe(reload({stream: true})); //И перезагрузим сервер
-});
+// gulp.task('js:public', function () {
+//   return gulp.src(path.src.jsMain) //Найдем наш main файл
+//     .pipe(rigger(''))
+//     .pipe(jsMin()) //Сожмем наш js
+//     .pipe(gulp.dest(path.public.js)) //Выплюнем готовый файл в public
+//     .pipe(reload({stream: true})); //И перезагрузим сервер
+// });
 
 // IMAGE
 gulp.task('image:public', function () {
@@ -130,48 +131,31 @@ gulp.task('image:public', function () {
       .pipe(reload({stream: true}));
 });
 
+gulp.task('clean', function (cb) {
+  return rimraf(path.clean, cb);
+});
+
+gulp.task('public', [
+  'html:public',
+  'css:public',
+  'image:public'
+  ]);
+
 // OTHER
 gulp.task('watch', function(){
   return
   watch([path.src.html], function(event, cb) {
     gulp.start('html:public');
   });
-  watch([path.src.css], function(event, cb) {
+  watch([path.src.cssAll], function(event, cb) {
     gulp.start('css:public');
   });
-  watch([path.src.js], function(event, cb) {
+  watch([path.src.jsAll], function(event, cb) {
     gulp.start('js:public');
   });
   watch([path.src.img], function(event, cb) {
     gulp.start('image:public');
   });
 });
-
-gulp.task('clean', function (cb) {
-  return rimraf(path.clean, cb);
-});
-
-gulp.task('css:public', [
-  'css:collectStyle',
-  'css:minifyDeploy'
-  ]);
-
-gulp.task('public', [
-  'html:public',
-  'js:public',
-  'css:public',
-  'image:public'
-  ]);
-
-// Публикация с 0
-gulp.task('FULLpublic', [
-  'clean',
-  'html:public',
-  'js:public',
-  'normoliz:public',
-  'css:public',
-  'js:public',
-  'image:public'
-  ]);
 
 gulp.task('default', ['public', 'webserver', 'watch']);
