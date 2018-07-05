@@ -1,20 +1,40 @@
+// const gulp = require('gulp'); Основной
+// const watch = require('gulp-watch'); Смотреть изменения
+// const browserSync = require('browser-sync'); LiveLoad
+// const reload = browserSync.reload; LiveLoad_Reload
+// const cssMin = require('gulp-clean-css'); Css minify
+// const autoPrefixer = require('gulp-autoprefixer');
+// const csscomb = require('gulp-csscomb'); Сортировщик свойств
+// const jsMin = require('gulp-uglify'); Js minify
+// const imageMin = require('gulp-imagemin'); imgOptimiz
+// const pngquant = require('imagemin-pngquant'); imgOptimiz
+// const rimraf = require('rimraf'); rm -r
+// const fileinclude = require('gulp-file-include'); Сцепление через префикс @@include
+// const concat = require('gulp-concat'); сцепление файлов в один
+// const importCss = require('gulp-import-css'); Сцепляет все css в один через @import. Работает не только для css
+// const sass = require('gulp-sass'); SASS компилятор
+// const rigger = require('gulp-rigger'); Соединение через //= file НЕ РАБОТАЕТ В CSS
+// const rename = require('gulp-rename'); Переименовать файл
+
+
 'use strict';
 
 const gulp = require('gulp');
 const watch = require('gulp-watch');
 const browserSync = require('browser-sync');
 const reload = browserSync.reload;
-// const sass = require('gulp-sass'); //SASS preproc
-const importCss = require('gulp-import-css')
+
+const importCss = require('gulp-import-css');
 const cssMin = require('gulp-clean-css');
 const autoPrefixer = require('gulp-autoprefixer');
 const csscomb = require('gulp-csscomb');
+
 const jsMin = require('gulp-uglify');
+
 const imageMin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
-const rigger = require('gulp-rigger');
-// const rimraf = require('rimraf'); // Соединение через //= file
-const rename = require('gulp-rename');
+
+const rimraf = require('rimraf');
 
 const path = {
   public: {
@@ -27,7 +47,7 @@ const path = {
     html: 'src/*.html',
     img: 'src/img/*.*',
     cssAll: 'src/common.blocks/**/*.css',
-    cssMain: 'src/css/style.css',
+    cssMain: 'src/css/style',
     normoliz: 'node_modules/normalize.css/normalize.css',
     jsAll: 'src/common.blocks/**/*.js',
     jsMain: 'src/js/main.js'
@@ -60,14 +80,17 @@ gulp.task('normoliz:public', function () {
 gulp.task('css:public', function () {
   return gulp.src(path.src.cssMain) //Выберем наш css
     .pipe(importCss()) //Собрать
+    .pipe(autoPrefixer())
     .pipe(csscomb())
+    .pipe(cssMin())
     .pipe(gulp.dest(path.public.css)) //И в public
     .pipe(reload({stream: true}));
 });
 
 gulp.task('csscomb', function () {
-  return gulp.src(path.src.cssAll) //Найдем все файлы css
-    .pipe(csscomb()); //"Причешим"
+  return gulp.src(path.public.css  + 'style.css') //Найдем все файлы css
+    .pipe(csscomb()) //"Причешим"
+    .pipe(gulp.dest(path.public.css));
 });
 
 gulp.task('js:public', function () {
@@ -89,13 +112,6 @@ gulp.task('image:public', function () {
       .pipe(gulp.dest(path.public.img)) //И бросим в public/assets
       .pipe(reload({stream: true}));
 });
-
-gulp.task('public', [
-  'html:public',
-  'js:public',
-  'css:public',
-  'image:public'
-  ]);
 
 gulp.task('watch', function(){
   return
@@ -120,5 +136,23 @@ gulp.task('webserver', function () {
 gulp.task('clean', function (cb) {
   return rimraf(path.clean, cb);
 });
+
+gulp.task('public', [
+  'html:public',
+  'js:public',
+  'css:public',
+  'image:public'
+  ]);
+
+// Публикация с 0
+gulp.task('FULLpublic', [
+  'clean',
+  'html:public',
+  'js:public',
+  'normoliz:public',
+  'css:public',
+  'js:public',
+  'image:public'
+  ]);
 
 gulp.task('default', ['public', 'webserver', 'watch']);
