@@ -24,11 +24,14 @@ const path = {
     img: 'src/img/*.*',
     cssAll: 'src/common.blocks/**/*.css', 
     cssMain: 'src/css/style.css',
+    normoliz: 'node_modules/normalize.css'
     jsAll: 'src/common.blocks/**/*.js', 
     jsMain: 'src/js/main.js'
   },
   clean: './public'
 };
+
+let numbers = 12;
 
 const config = {
   server: {
@@ -44,7 +47,13 @@ gulp.task('html:public', function () {
   return gulp.src(path.src.html) //Выберем файлы по нужному пути
     .pipe(gulp.dest(path.public.html)) //Выплюнем их в папку public
     .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
-    });
+});
+
+gulp.task('normoliz:public', function () {
+  return gulp.src(path.src.normoliz)
+    .pipe(cssMin())
+    .pipe(gulp.dest(path.public.css));
+});
 
 gulp.task('css:public', function () {
   return gulp.src(path.src.cssMain) //Выберем наш css
@@ -53,7 +62,7 @@ gulp.task('css:public', function () {
     .pipe(cssMin()) //Сожмем
     .pipe(gulp.dest(path.public.css)) //И в public
     .pipe(reload({stream: true}));
-    });
+});
 
 gulp.task('js:public', function () {
   return gulp.src(path.src.jsMain) //Найдем наш main файл
@@ -61,19 +70,19 @@ gulp.task('js:public', function () {
     .pipe(jsMin()) //Сожмем наш js
     .pipe(gulp.dest(path.public.js)) //Выплюнем готовый файл в public
     .pipe(reload({stream: true})); //И перезагрузим сервер
-    });
+});
 
 gulp.task('image:public', function () {
-    return gulp.src(path.src.img) //Выберем наши картинки
-        .pipe(imageMin({ //Сожмем их
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()],
-            interlaced: true
-        }))
-        .pipe(gulp.dest(path.public.img)) //И бросим в public/assets
-        .pipe(reload({stream: true}));
-    });
+  return gulp.src(path.src.img) //Выберем наши картинки
+      .pipe(imageMin({ //Сожмем их
+          progressive: true,
+          svgoPlugins: [{removeViewBox: false}],
+          use: [pngquant()],
+          interlaced: true
+      }))
+      .pipe(gulp.dest(path.public.img)) //И бросим в public/assets
+      .pipe(reload({stream: true}));
+});
 
 gulp.task('public', [
   'html:public',

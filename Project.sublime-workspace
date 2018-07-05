@@ -4,6 +4,78 @@
 		"selected_items":
 		[
 			[
+				"con",
+				"config〔variable〕"
+			],
+			[
+				"fe",
+				"forEach"
+			],
+			[
+				"forE",
+				"forEach"
+			],
+			[
+				"forEa",
+				"description-forEach\tArray"
+			],
+			[
+				"doc",
+				"document\t: Document Window"
+			],
+			[
+				"qsa",
+				"querySelectorAll\t( selectors: DOMString ): NodeList Element"
+			],
+			[
+				"docum",
+				"Document\t[class: Document]"
+			],
+			[
+				"docume",
+				"document\t: Document Window"
+			],
+			[
+				"va",
+				"var"
+			],
+			[
+				"document",
+				"Document\t(): Document Document"
+			],
+			[
+				"que",
+				"querySelector\t( selectors: DOMString ): Element (Selectors) Element"
+			],
+			[
+				"publi",
+				"public"
+			],
+			[
+				"f",
+				"f\tAnonymous Function"
+			],
+			[
+				"css",
+				"cssMin"
+			],
+			[
+				"di",
+				"display\tproperty"
+			],
+			[
+				"fun",
+				"fun\tFunction"
+			],
+			[
+				"gu",
+				"gulp"
+			],
+			[
+				"n",
+				"normalize.css"
+			],
+			[
 				"im",
 				"imageMin"
 			],
@@ -28,47 +100,42 @@
 	"buffers":
 	[
 		{
-			"file": "src/index.html",
+			"contents": "4 3 3 2 3 2 4 4 5 8 8\n",
 			"settings":
 			{
-				"buffer_size": 8093,
+				"buffer_size": 22,
+				"line_ending": "Windows",
+				"name": "4 3 3 2 3 2 4 4 5 8 8"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html lang=\"ru\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>HTML Academy: Нердс</title>\n  <link href=\"css/normalize.css\" rel=\"stylesheet\">\n  <link href=\"css/style.css\" rel=\"stylesheet\">\n</head>\n<body>\n  <header class=\"header\"> \n    <a class=\"logo header__logo\" href=\"index.html\">Нердс</a>\n    <ul class=\"menu header__menu\">\n      <li class=\"menu__item\">\n        <a class=\"menu__link\" href=\"#\">Студия</a>\n      </li>\n      <li class=\"menu__item\">\n        <a class=\"menu__link\" href=\"#\">Клиенты</a>\n      </li> \n      <li class=\"menu__item\">\n        <a class=\"menu__link\" href=\"catalog.html\">Магазин</a>\n      </li>\n      <li class=\"menu__item\">\n        <a class=\"menu__link\" href=\"#\">Контакты</a>\n      </li>\n    </ul> \n    \n    <a class=\"cart header__cart\" href=\"#\">Корзина</a>\n<div cl></div>\n    <h1 class=\"header__title\">Магазин готовых шаблонов</h1>\n  </header>\n  <main class=\"main\">\n    <div class=\"colums\">\n      <div class=\"colums__col-1\">\n        <section class=\"filters colums__filters\">\n          <h2 class=\"visually-hidden\">Фильтры</h2>\n          <form class=\"filters__form-filters\" method=\"get\" action=\"https://echo.htmlacademy.ru\">\n            <fieldset class=\"filter-cost filters__filter-cost\">\n              <legend class=\"filter-title filter-cost__filter-title\">Стоимость:</legend>\n              <div class=\"range-slider filter-cost__range-slider\">\n                <div class=\"range-slider__bar\">\n                  <div class=\"range-slider__scale\"></div>\n                </div>\n                <div class=\"range-slider__toggle range-slider__toggle--min\"></div>\n                <div class=\"range-slider__toggle range-slider__toggle--max\"></div>\n              </div>\n              <div class=\"price filter-cost__price\">\n                <label class=\"price__min\" for=\"i_min\">ОТ</label>\n                <input class=\"price__min\" id=\"i_min\" name=\"min\" type=\"text\" value=\"0\">\n                <label class=\"price__maх\" for=\"i_mах\">ДО</label>\n                <input class=\"price__max\" id=\"i_mах\" name=\"max\" type=\"text\" value=\"30000\">\n              </div>\t\n            </fieldset>\n\n            <fieldset class=\"filter-meshes filters__filter-meshes\">\n              <legend class=\"filter-title filter-mesh__filter-title\">Сетка:</legend>\n              <ul class=\"meshes\">\n                <li class=\"mesh\">\n                  <input class=\"visually-hidden mesh__radio-button\" id=\"adaptive\" type=\"radio\" name=\"meshes-group\" checked>\n                  <label for=\"adaptive\" class=\"mesh__name\">Адаптивная</label>\n                </li>\n                <li class=\"mesh\">\n                  <input class=\"visually-hidden mesh__radio-button\" id=\"fixed\" type=\"radio\" name=\"meshes-group\" checked>\n                  <label for=\"fixed\" class=\"mesh__name\">Фиксированная</label>\n                </li>\n                <li class=\"mesh\">\n                  <input class=\"visually-hidden mesh__radio-button\" id=\"rubber\" type=\"radio\" name=\"meshes-group\" checked>\n                  <label for=\"rubber\" class=\"mesh__name\">Резиновая</label>\n                </li>\n              </ul>\n            </fieldset>  \n\n            <fieldset class=\"filter-specifications filters__filter-specifications\">\n              <legend class=\"filter-title filter-specifications__filter-title\">Особенности:</legend>\n              <ul class=\"specifications\">\n                <li class=\"specification\">\n                  <input class=\"visually-hidden specification__check-box\" id=\"slider\" type=\"radio\" name=\"specifications-group\" checked>\n                  <label for=\"slider\" class=\"specification__name\">Слайдер</label>\n                </li>\n                <li class=\"specification\">\n                  <input class=\"visually-hidden specification__check-box\" id=\"block-advatages\" type=\"radio\" name=\"specifications-group\" checked>\n                  <label for=\"block-advatages\" class=\"specification__name\">Блок преимуществ</label>\n                </li>\n                <li class=\"specification\">\n                  <input class=\"visually-hidden specification__check-box\" id=\"news\" type=\"radio\" name=\"specifications-group\" checked>\n                  <label for=\"news\" class=\"specification__name\">Новости</label>\n                </li>\n                <li class=\"specification\">\n                  <input class=\"visually-hidden specification__check-box\" id=\"gallary\" type=\"radio\" name=\"specifications-group\" checked>\n                  <label for=\"slider\" class=\"specification__name\">Галерея</label>\n                </li>\n                <li class=\"specification\">\n                  <input class=\"visually-hidden specification__check-box\" id=\"cart\" type=\"radio\" name=\"specifications-group\" checked>\n                  <label for=\"cart\" class=\"specification__name\">Корзина</label>\n                </li>\n              </ul>\n            </fieldset>\n            \n            <button class=\"button filters__button\" type=\"submit\">Показать</button>\n          </form>\n        </section>\n      </div>\n\n      <div class=\"colums__col-2\">\n        <section class=\"sorting\">\n          <h2 class=\"sorting__title\">Сортировать:</h2>\n          <ul class=\"sorting__parametors\">\n            <li class=\"sorting__parametor\">\n              <a class=\"sorting__link\" href=\"#\">По цене</a>\n            </li>\n            <li class=\"sorting__parametor\">\n              <a class=\"sorting__link\" href=\"#\">По типу</a>\n            </li>\n            <li class=\"sorting__parametor\">\n              <a class=\"sorting__link\" href=\"#\">По названию</a>\n            </li>\n            <li class=\"sorting__parametor\">\n              <a class=\"sorting__link\" href=\"#\">По возрастанию</a>\n            </li>\n            <li class=\"sorting__parametor\">\n              <a class=\"sorting__link\" href=\"#\">По убыванию</a>\n            </li>\n          </ul>\n        </section>\n\n        <section class=\"templates-catalog\">\n          <h2 class=\"visually-hidden\">Каталог шаблонов</h2>\n          <ul class=\"templates-catalog__list\">\n            <li class=\"templates-catalog__item\">\n              <img src=\"assets/img/works-sedona.jpg\" width=\"360\" height=\"576\" alt=\"Седона\">\n              <div class=\"template-hover\">\n                <h3 class=\"template-hover__title\">Sedona</h3>\n                <p class=\"template-hover__description\">Информационный сайт для туристов</p>\n                <button class=\"template-hover__price\">9 900 руб.</button>\n              </div>\n            </li>\n            <li class=\"templates-catalog__item\">\n              <img src=\"assets/img/works-pink.jpg\" width=\"360\" height=\"576\" alt=\"Pink App\">\n              <div class=\"template-hover\">\n                <h3 class=\"template-hover__title\">Pink App</h3>\n                <p class=\"template-hover__description\">Продуктовый лендинг приложения для iOS и Android</p>\n                <button class=\"template-hover__price\">9 900 руб.</button>\n              </div>\n            </li>\n            <li class=\"templates-catalog__item\">\n              <img src=\"assets/img/works-borodinski.jpg\" width=\"360\" height=\"576\" alt=\"Barbershop\">\n              <div class=\"template-hover\">\n                <h3 class=\"template-hover__title\">Barbershop</h3>\n                <p class=\"template-hover__description\">Сайт салоны красоты. Для мужчин, да.</p>\n                <button class=\"template-hover__price\">9 900 руб.</button>\n              </div>\n            </li>\n            <li class=\"templates-catalog__item\">\n              <img src=\"assets/img/works-mishka.jpg\" width=\"360\" height=\"576\" alt=\"Mishka\">\n              <div class=\"template-hover\">\n                <h3 class=\"template-hover__title\">Mishka</h3>\n                <p class=\"template-hover__description\">Интернет-магазин вязаных игрушек</p>\n                <button class=\"template-hover__price\">9 900 руб.</button>\n              </div>\n            </li>\n            <li class=\"templates-catalog__item\">\n              <img src=\"assets/img/works-aplus.jpg\" width=\"360\" height=\"576\" alt=\"A Plus\">\n              <div class=\"template-hover\">\n                <h3 class=\"template-hover__title\">A Plus</h3>\n                <p class=\"template-hover__description\">Лендинг курсов повышения квалификации</p>\n                <button class=\"template-hover__price\">9 900 руб.</button>\n              </div>\n            </li>\n            <li class=\"templates-catalog__item\">\n              <img src=\"assets/img/works-kvas.jpg\" width=\"360\" height=\"576\" alt=\"Квас\">\n              <div class=\"template-hover\">\n                <h3 class=\"template-hover__title\">Кваст</h3>\n                <p class=\"template-hover__description\">Промо-сайт производителя крафтового кваса</p>\n                <button class=\"template-hover__price\">9 900 руб.</button>\n              </div>\n            </li>\n          </ul>\n        </section>\n\n        <ul class=\"pagination-list\">\n         <li class=\"pagination-list__item pagination-list__item--current\">\n          <a class=\"button pagination-list__button\">1</a>\n        </li>\n        <li class=\"pagination-list__item\">\n          <a class=\"button pagination-list__button\" href=\"#\">2</a>\n        </li>\n        <li class=\"pagination-list__item\">\n          <a class=\"button pagination-list__button\" href=\"#\">3</a>\n        </li>\n        <li class=\"pagination-list__item pagination-list__item--last\">\n          <a class=\"button pagination-list__button\" href=\"#\">Следующая</a>\n        </li>\n      </ul>\n    </div>\n\n\n    <section class=\"contacts\">\n      <h2 class=\"visually-hidden\">Контакты</h2>\n      <div class=\"map\">Карта</div>\n      <div class=\"feedback\">\n        <h3 class=\"feedback__title\">NЁRDS DESIGN STUDIO</h3>\n        <p class=\"feedback__text\">\n          <span class=\"feedback__address\">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>\n          <span class=\"feedback__phone\">тел. +7 (812) 275-75-75</span>\n        </p>\n        <a class=\"button\" href=\"writeus.html\">Напишите нам</a>\n      </div>\n    </section>\n  </main>\t\n\n  <footer class=\"footer\">\n    <ul class=\"social-list footer__social-list\">\n      <li class=\"social__item social__item--vk\">\n        <a class=\"social__link\" href=\"#\">vk</a>\n      </li>\n      <li class=\"social__item social__item--facebook\">\n        <a class=\"social__link\" href=\"#\">facebook</a>\n      </li>\n      <li class=\"social__item social__item--instogramm\">\n        <a class=\"social__link\" href=\"#\">instogram</a>\n      </li>\n    </ul>\n    <div class=\"discount footer__discount\">\n      <p class=\"discount__title\">Давайте дружить, это выгодно!</p>\n      <p class=\"discount__description\">Скидка 10% для друзей из социальных сетей.</p>\n    </div>\n  </footer>\n</body>\n</html>\n",
+			"file": "src/catalog.html",
+			"file_size": 11362,
+			"file_write_time": 131752463119796488,
+			"settings":
+			{
+				"buffer_size": 10536,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/main.js",
+			"settings":
+			{
+				"buffer_size": 14,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/css/style.css",
-			"settings":
-			{
-				"buffer_size": 1734,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/common.blocks/files.bat",
-			"settings":
-			{
-				"buffer_size": 68,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/common.blocks/container.css",
-			"settings":
-			{
-				"buffer_size": 0,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
+			"contents": "'use strict';\n\nconst gulp = require('gulp');\nconst watch = require('gulp-watch');\nconst browserSync = require('browser-sync');\nconst reload = browserSync.reload;\nconst cssMin = require('gulp-clean-css');\nconst autoPrefixer = require('gulp-autoprefixer');\nconst jsMin = require('gulp-uglify');\nconst imageMin = require('gulp-imagemin');\nconst pngquant = require('imagemin-pngquant');\nconst rigger = require('gulp-rigger');\nconst rimraf = require('rimraf');\n\nconst path = {\n  public: {\n    html: 'public/',    \n    img: 'public/assets/img/',\n    css: 'public/assets/css/',\n    js: 'public/assets/js/'\n  },\n  src: {\n    html: 'src/*.html',\n    img: 'src/img/*.*',\n    cssAll: 'src/common.blocks/**/*.css', \n    cssMain: 'src/css/style.css',\n    normoliz: 'node_modules/normalize.css'\n    jsAll: 'src/common.blocks/**/*.js', \n    jsMain: 'src/js/main.js'\n  },\n  clean: './public'\n};\n\nconst config = {\n  server: {\n    baseDir: './public'\n  },\n  tunnel: true,\n  host: 'localhost',\n  port: 9000,\n  logPrefix: \"Frontend_DevilDante\"\n};\nvar a = new Array();\na.\n\ngulp.task('html:public', function () {\n  return gulp.src(path.src.html) //Выберем файлы по нужному пути\n    .pipe(gulp.dest(path.public.html)) //Выплюнем их в папку public\n    .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений\n});\n\ngulp.task('normoliz:public', function () {\n  return gulp.src(path.src.normoliz)\n    .pipe(cssMin())\n    .pipe(gulp.dest(path.public.css));\n});\n\ngulp.task('css:public', function () {\n  return gulp.src(path.src.cssMain) //Выберем наш css\n    .pipe(rigger(''))\n    .pipe(autoPrefixer()) //Добавим вендорные префиксы\n    .pipe(cssMin()) //Сожмем\n    .pipe(gulp.dest(path.public.css)) //И в public\n    .pipe(reload({stream: true}));\n});\n\ngulp.task('js:public', function () {\n  return gulp.src(path.src.jsMain) //Найдем наш main файл\n    .pipe(rigger(''))\n    .pipe(jsMin()) //Сожмем наш js\n    .pipe(gulp.dest(path.public.js)) //Выплюнем готовый файл в public\n    .pipe(reload({stream: true})); //И перезагрузим сервер\n});\n\ngulp.task('image:public', function () {\n  return gulp.src(path.src.img) //Выберем наши картинки\n      .pipe(imageMin({ //Сожмем их\n          progressive: true,\n          svgoPlugins: [{removeViewBox: false}],\n          use: [pngquant()],\n          interlaced: true\n      }))\n      .pipe(gulp.dest(path.public.img)) //И бросим в public/assets\n      .pipe(reload({stream: true}));\n});\n\ngulp.task('public', [\n  'html:public',\n  'js:public',\n  'css:public',\n  'image:public'\n  ]);\n\ngulp.task('watch', function(){\n  return \n  watch([path.src.html], function(event, cb) {\n    gulp.start('html:public');\n  });\n  watch([path.src.css], function(event, cb) {\n    gulp.start('css:public');\n  });\n  watch([path.src.js], function(event, cb) {\n    gulp.start('js:public');\n  });\n  watch([path.src.img], function(event, cb) {\n    gulp.start('image:public');\n  });\n});\n\ngulp.task('webserver', function () {\n  return browserSync(config);\n});\n\ngulp.task('clean', function (cb) {\n  return rimraf(path.clean, cb);\n});\n\ngulp.task('default', ['public', 'webserver', 'watch']);\n",
 			"file": "gulpfile.js",
+			"file_size": 3408,
+			"file_write_time": 131752524529946259,
 			"settings":
 			{
-				"buffer_size": 2904,
-				"encoding": "UTF-8",
+				"buffer_size": 3081,
 				"line_ending": "Windows"
 			}
 		}
@@ -84,6 +151,46 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"list ",
+				"Package Control: List Packages"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"list pa",
+				"Package Control: List Packages"
+			],
+			[
+				"pac",
+				"Package Control: Enable Package"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"subl",
+				"SublimeCodeIntel: Disable Plugin"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
 			[
 				"quic",
 				"Quick File Creator: Create file"
@@ -128,6 +235,7 @@
 		"height": 287.0,
 		"history":
 		[
+			"sublime.log_commands(True)",
 			"view.scope_name(view.sel()[0].begin())",
 			"sublime.log_commands(True)",
 			"stop",
@@ -148,14 +256,25 @@
 	},
 	"expanded_folders":
 	[
-		"/E/Git_banch/HTML(basic)/nerds-ggv",
-		"/E/Git_banch/HTML(basic)/nerds-ggv/src",
-		"/E/Git_banch/HTML(basic)/nerds-ggv/src/common.blocks",
-		"/E/Git_banch/HTML(basic)/nerds-ggv/src/css",
-		"/E/Git_banch/HTML(basic)/nerds-ggv/src/js"
+		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv",
+		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/src",
+		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/src/common.blocks",
+		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/src/css",
+		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/src/js"
 	],
 	"file_history":
 	[
+		"/C/Users/ggevorkyan/AppData/Roaming/Sublime Text 3/Packages/User/JavaScript-Completions.sublime-settings",
+		"/C/Users/ggevorkyan/AppData/Roaming/Sublime Text 3/Packages/JavaScript Completions/JavaScript-Completions.sublime-settings",
+		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/src/index.html",
+		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/gulpfile.js",
+		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/src/js/main.js",
+		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/src/common.blocks/visually-hidden.css",
+		"/C/Users/ggevorkyan/AppData/Roaming/Sublime Text 3/Packages/JavaScript Completions/Default (Windows).sublime-keymap",
+		"/C/Users/ggevorkyan/AppData/Roaming/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
+		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/src/css/style.css",
+		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/src/common.blocks/files.bat",
+		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/src/common.blocks/container.css",
 		"/E/Git_banch/HTML(basic)/nerds-ggv/src/common.blocks/template-hover.css",
 		"/E/Git_banch/HTML(basic)/nerds-ggv/src/common.blocks/specifications.css",
 		"/E/Git_banch/HTML(basic)/nerds-ggv/src/common.blocks/specification.css",
@@ -207,11 +326,8 @@
 		"/C/Users/Dante/AppData/Roaming/Sublime Text 3/Packages/Gulp/Default (Windows).sublime-keymap",
 		"/C/Users/Dante/AppData/Roaming/Sublime Text 3/Packages/Gulp/Gulp.sublime-settings",
 		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/src/catalog.html",
-		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/src/index.html",
-		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/gulpfile.js",
 		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/package.json",
 		"/C/Users/ggevorkyan/AppData/Roaming/Sublime Text 3/Packages/AutoFileName/autofilename.sublime-settings",
-		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/src/css/style.css",
 		"/C/Users/ggevorkyan/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/C/Users/ggevorkyan/Desktop/Git_banch/HTML(basic)/nerds-ggv/SL_3",
 		"/C/Users/ggevorkyan/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
@@ -222,7 +338,7 @@
 	],
 	"find":
 	{
-		"height": 59.0
+		"height": 33.0
 	},
 	"find_in_files":
 	{
@@ -236,6 +352,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"true",
 			"tamplate-hover",
 			"tamplates",
 			"template-hover",
@@ -281,28 +398,26 @@
 			[
 				{
 					"buffer": 0,
-					"file": "src/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8093,
+						"buffer_size": 22,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4781,
-								4781
+								22,
+								22
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"auto_name": "4 3 3 2 3 2 4 4 5 8 8",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
-						"translation.x": 20.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -311,115 +426,25 @@
 				},
 				{
 					"buffer": 1,
-					"file": "src/css/style.css",
+					"file": "src/catalog.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1734,
+						"buffer_size": 10536,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								174,
-								174
+								737,
+								737
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/common.blocks/files.bat",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 68,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								67
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/common.blocks/container.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 4,
-					"file": "gulpfile.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 2904,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								382,
-								382
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"auto_complete": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -427,7 +452,73 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "src/js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14,
+								14
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "gulpfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3081,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								932,
+								932
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 288.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -461,7 +552,7 @@
 		"cols":
 		[
 			0.0,
-			0.457201683792,
+			0.423853211009,
 			1.0
 		],
 		"rows":
@@ -483,7 +574,7 @@
 	"project": "Project.sublime-project",
 	"replace":
 	{
-		"height": 102.0
+		"height": 62.0
 	},
 	"save_all_on_build": false,
 	"select_file":
@@ -513,7 +604,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
