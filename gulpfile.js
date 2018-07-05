@@ -16,12 +16,13 @@
 // const sass = require('gulp-sass'); SASS компилятор
 // const rigger = require('gulp-rigger'); Соединение через //= file НЕ РАБОТАЕТ В CSS
 // const rename = require('gulp-rename'); Переименовать файл
+// const runSequence = require('run-sequence'); последов. запуск тасков (синх!)
 
 
 'use strict';
 
 const gulp = require('gulp');
-const watch = require('gulp-watch');
+// const watch = require('gulp-watch'); может на работать - использовать gulp.watch
 const browserSync = require('browser-sync');
 const reload = browserSync.reload;
 
@@ -144,9 +145,9 @@ gulp.task('public', [
 
 // OTHER
 gulp.task('watch', function(){
-  watch(path.src.html, ['html:public']);
-  watch(path.src.cssAll, ['css:public']);
-  watch(path.src.img, ['image:public']);
+  gulp.watch(path.src.html, ['html:public']);
+  gulp.watch(path.src.cssAll, ['css:public']);
+  gulp.watch(path.src.img, ['image:public']);
 });
 
 gulp.task('default', function(callback) {
