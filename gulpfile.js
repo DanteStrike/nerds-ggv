@@ -35,6 +35,7 @@ const jsMin = require('gulp-uglify');
 const imageMin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
 
+const runSequence = require('run-sequence');
 const rimraf = require('rimraf');
 
 // Основыне пути
@@ -148,4 +149,6 @@ gulp.task('watch', function(){
   watch(path.src.img, ['image:public']);
 });
 
-gulp.task('default', ['public', 'webserver', 'watch']);
+gulp.task('default', function(callback) {
+  runSequence(['public', 'webserver'], 'watch', callback);
+});
