@@ -1,0 +1,21 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+
+  text-decoration: none;
+
+  overflow-wrap: break-word;
+}
+
+img {
+  text-align: center;
+  max-width: 100%;
+  height: auto;
+}
+

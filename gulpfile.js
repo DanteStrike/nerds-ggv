@@ -4,17 +4,21 @@ const gulp = require('gulp');
 const watch = require('gulp-watch');
 const browserSync = require('browser-sync');
 const reload = browserSync.reload;
+// const sass = require('gulp-sass'); //SASS preproc
+const importCss = require('gulp-import-css')
 const cssMin = require('gulp-clean-css');
 const autoPrefixer = require('gulp-autoprefixer');
+const csscomb = require('gulp-csscomb');
 const jsMin = require('gulp-uglify');
 const imageMin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
 const rigger = require('gulp-rigger');
-const rimraf = require('rimraf');
+// const rimraf = require('rimraf'); // Соединение через //= file
+const rename = require('gulp-rename');
 
 const path = {
   public: {
-    html: 'public/',    
+    html: 'public/',
     img: 'public/assets/img/',
     css: 'public/assets/css/',
     js: 'public/assets/js/'
@@ -22,16 +26,14 @@ const path = {
   src: {
     html: 'src/*.html',
     img: 'src/img/*.*',
-    cssAll: 'src/common.blocks/**/*.css', 
+    cssAll: 'src/common.blocks/**/*.css',
     cssMain: 'src/css/style.css',
-    normoliz: 'node_modules/normalize.css'
-    jsAll: 'src/common.blocks/**/*.js', 
+    normoliz: 'node_modules/normalize.css/normalize.css',
+    jsAll: 'src/common.blocks/**/*.js',
     jsMain: 'src/js/main.js'
   },
   clean: './public'
 };
-
-let numbers = 12;
 
 const config = {
   server: {
@@ -57,11 +59,15 @@ gulp.task('normoliz:public', function () {
 
 gulp.task('css:public', function () {
   return gulp.src(path.src.cssMain) //Выберем наш css
-    .pipe(rigger(''))
-    .pipe(autoPrefixer()) //Добавим вендорные префиксы
-    .pipe(cssMin()) //Сожмем
+    .pipe(importCss()) //Собрать
+    .pipe(csscomb())
     .pipe(gulp.dest(path.public.css)) //И в public
     .pipe(reload({stream: true}));
+});
+
+gulp.task('csscomb', function () {
+  return gulp.src(path.src.cssAll) //Найдем все файлы css
+    .pipe(csscomb()); //"Причешим"
 });
 
 gulp.task('js:public', function () {
@@ -92,7 +98,7 @@ gulp.task('public', [
   ]);
 
 gulp.task('watch', function(){
-  return 
+  return
   watch([path.src.html], function(event, cb) {
     gulp.start('html:public');
   });
