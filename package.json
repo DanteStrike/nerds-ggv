@@ -23,6 +23,7 @@
     "gulp-clean-css": "^3.9.4",
     "gulp-concat": "^2.6.1",
     "gulp-csscomb": "^3.0.8",
+    "gulp-csscomb-lint": "0.0.2",
     "gulp-file-include": "^2.0.1",
     "gulp-imagemin": "^4.1.0",
     "gulp-import-css": "^0.1.3",

@@ -5,6 +5,7 @@
 // const cssMin = require('gulp-clean-css'); Css minify
 // const autoPrefixer = require('gulp-autoprefixer');
 // const csscomb = require('gulp-csscomb'); Сортировщик свойств
+// const csscomblint = require('gulp-csscomb-lint');
 // const jsMin = require('gulp-uglify'); Js minify
 // const imageMin = require('gulp-imagemin'); imgOptimiz
 // const pngquant = require('imagemin-pngquant'); imgOptimiz
@@ -36,6 +37,7 @@ const pngquant = require('imagemin-pngquant');
 
 const rimraf = require('rimraf');
 
+// Основыне пути
 const path = {
   public: {
     html: 'public/',
@@ -46,15 +48,17 @@ const path = {
   src: {
     html: 'src/*.html',
     img: 'src/img/*.*',
-    cssAll: 'src/common.blocks/**/*.css',
-    cssMain: 'src/css/style',
+    commonBlocks: 'src/common.blocks/',
+    cssAll: 'src/common.blocks/*.css',
+    cssMain: 'src/css/',
     normoliz: 'node_modules/normalize.css/normalize.css',
-    jsAll: 'src/common.blocks/**/*.js',
+    jsAll: 'src/common.blocks/*.js',
     jsMain: 'src/js/main.js'
   },
   clean: './public'
 };
 
+// Конфигурация сервера для LiveLoad
 const config = {
   server: {
     baseDir: './public'
@@ -65,34 +69,46 @@ const config = {
   logPrefix: "Frontend_DevilDante"
 };
 
+gulp.task('webserver', function () {
+  return browserSync(config);
+});
+
+// HTML
 gulp.task('html:public', function () {
   return gulp.src(path.src.html) //Выберем файлы по нужному пути
     .pipe(gulp.dest(path.public.html)) //Выплюнем их в папку public
     .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
 });
 
+// CSS
 gulp.task('normoliz:public', function () {
   return gulp.src(path.src.normoliz)
     .pipe(cssMin())
     .pipe(gulp.dest(path.public.css));
 });
 
-gulp.task('css:public', function () {
-  return gulp.src(path.src.cssMain) //Выберем наш css
+gulp.task('css:collectStyle', function () {
+  return gulp.src(path.src.cssMain + 'style.css') //Выберем наш css
     .pipe(importCss()) //Собрать
     .pipe(autoPrefixer())
     .pipe(csscomb())
+    .pipe(gulp.dest(path.src.cssMain + '_style')); //И в public
+});
+
+gulp.task('css:minifyDeploy', function () {
+  return gulp.src(path.src.cssMain + '/_style/style.css') //Выберем наш css
     .pipe(cssMin())
     .pipe(gulp.dest(path.public.css)) //И в public
     .pipe(reload({stream: true}));
 });
 
 gulp.task('csscomb', function () {
-  return gulp.src(path.public.css  + 'style.css') //Найдем все файлы css
+  return gulp.src(path.src.cssAll) //Найдем все файлы css
     .pipe(csscomb()) //"Причешим"
-    .pipe(gulp.dest(path.public.css));
+    .pipe(gulp.dest(path.src.commonBlocks));
 });
 
+// JS
 gulp.task('js:public', function () {
   return gulp.src(path.src.jsMain) //Найдем наш main файл
     .pipe(rigger(''))
@@ -101,6 +117,7 @@ gulp.task('js:public', function () {
     .pipe(reload({stream: true})); //И перезагрузим сервер
 });
 
+// IMAGE
 gulp.task('image:public', function () {
   return gulp.src(path.src.img) //Выберем наши картинки
       .pipe(imageMin({ //Сожмем их
@@ -113,6 +130,7 @@ gulp.task('image:public', function () {
       .pipe(reload({stream: true}));
 });
 
+// OTHER
 gulp.task('watch', function(){
   return
   watch([path.src.html], function(event, cb) {
@@ -129,13 +147,14 @@ gulp.task('watch', function(){
   });
 });
 
-gulp.task('webserver', function () {
-  return browserSync(config);
-});
-
 gulp.task('clean', function (cb) {
   return rimraf(path.clean, cb);
 });
+
+gulp.task('css:public', [
+  'css:collectStyle',
+  'css:minifyDeploy'
+  ]);
 
 gulp.task('public', [
   'html:public',
