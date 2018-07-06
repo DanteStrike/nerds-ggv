@@ -1,5 +1,5 @@
 // const gulp = require('gulp'); Основной
-// const watch = require('gulp-watch'); Смотреть изменения
+// const watch = require('gulp-watch'); Смотреть изменения. Может не работать - использовать gulp.watch
 // const browserSync = require('browser-sync'); LiveLoad
 // const reload = browserSync.reload; LiveLoad_Reload
 // const cssMin = require('gulp-clean-css'); Css minify
@@ -22,7 +22,7 @@
 'use strict';
 
 const gulp = require('gulp');
-// const watch = require('gulp-watch'); может на работать - использовать gulp.watch
+
 const browserSync = require('browser-sync');
 const reload = browserSync.reload;
 
@@ -71,10 +71,6 @@ const config = {
   logPrefix: "Frontend_DevilDante"
 };
 
-gulp.task('webserver', function () {
-  return browserSync(config);
-});
-
 // HTML
 gulp.task('html:public', function () {
   return gulp.src(path.src.html) //Выберем файлы по нужному пути
@@ -97,8 +93,7 @@ gulp.task('css:collectStyle', function () {
     .pipe(gulp.dest(path.src.cssMain + '_style')); //Предпросмотр
 });
 
-// Зависим от css:collectStyle
-gulp.task('css:public', ['css:collectStyle'], function () {
+gulp.task('css:public', ['css:collectStyle'], function () { // Зависим от css:collectStyle
   return gulp.src(path.src.cssMain + '/_style/style.css') //Выберем наш css
     .pipe(cssMin())
     .pipe(gulp.dest(path.public.css)) //И в public
@@ -112,13 +107,12 @@ gulp.task('csscomb', function () {
 });
 
 // JS
-// gulp.task('js:public', function () {
-//   return gulp.src(path.src.jsMain) //Найдем наш main файл
-//     .pipe(rigger(''))
-//     .pipe(jsMin()) //Сожмем наш js
-//     .pipe(gulp.dest(path.public.js)) //Выплюнем готовый файл в public
-//     .pipe(reload({stream: true})); //И перезагрузим сервер
-// });
+gulp.task('js:public', function () {
+  return gulp.src(path.src.jsMain) //Найдем наш main файл
+    .pipe(jsMin()) //Сожмем наш js
+    .pipe(gulp.dest(path.public.js)) //Выплюнем готовый файл в public
+    .pipe(reload({stream: true})); //И перезагрузим сервер
+});
 
 // IMAGE
 gulp.task('image:public', function () {
@@ -133,23 +127,33 @@ gulp.task('image:public', function () {
       .pipe(reload({stream: true}));
 });
 
+//  Helpful tasks
 gulp.task('clean', function (cb) {
   return rimraf(path.clean, cb);
+});
+
+gulp.task('webserver', function () {
+  return browserSync(config);
+});
+
+gulp.task('watch', function(){
+  gulp.watch(path.src.html, ['html:public']);
+  gulp.watch(path.src.cssAll, ['css:public']);
+  gulp.watch(path.src.jsAll, ['js:public']);
+  gulp.watch(path.src.img, ['image:public']);
 });
 
 gulp.task('public', [
   'html:public',
   'css:public',
+  'js:public',
   'image:public'
   ]);
 
-// OTHER
-gulp.task('watch', function(){
-  gulp.watch(path.src.html, ['html:public']);
-  gulp.watch(path.src.cssAll, ['css:public']);
-  gulp.watch(path.src.img, ['image:public']);
+gulp.task('public--full', function(callback) {
+  runSequence('clean', 'public', callback);
 });
 
-gulp.task('default', function(callback) {
-  runSequence(['public', 'webserver'], 'watch', callback);
+gulp.task('start--work', function(callback) {
+  runSequence('public', 'webserver', 'watch', callback);
 });
