@@ -7,27 +7,33 @@
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
-    <a class="logo header__logo" href="index.html">Нердс</a>
-    <ul class="menu header__menu">
-      <li class="menu__item">
-        <a class="menu__link" href="#">Студия</a>
-      </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#">Клиенты</a>
-      </li>
-      <li class="menu__item">
-        <a class="menu__link" href="catalog.html">Магазин</a>
-      </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#">Контакты</a>
-      </li>
-    </ul>
-    <a class="cart header__cart" href="#">Корзина</a>
-<div cl></div>
-    <h1 class="header__title">Магазин готовых шаблонов</h1>
+  <header class="page-header">
+    <div class="page-header__top">
+      <a class="logo page-header__logo" href="index.html">Нердс</a>
+      <nav class="nav-main">
+        <ul class="nav-main__menu">
+          <li class="menu__item">
+            <a class="menu__link" href="#">Студия</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Клиенты</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="catalog.html">Магазин</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+        <a class="nav-main__user-cart" href="#">Корзина</a>
+      </nav>
+    </div>
+
+    <div class="page-header__bottom">
+      <h1 class="catalog-title">Магазин готовых шаблонов</h1>
+    </div>
   </header>
-  <main class="main">
+  <main class="page-main">
     <div class="colums">
       <div class="colums__col-1">
         <section class="filters colums__filters">
@@ -206,22 +212,22 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <ul class="social-list footer__social-list">
-      <li class="social__item social__item--vk">
-        <a class="social__link" href="#">vk</a>
+  <footer class="page-footer">
+    <ul class="page-footer__social-list">
+      <li class="page-footer__social-item page-footer__social-item--vk">
+        <a class="page-footer__social-link" href="#">vk</a>
       </li>
-      <li class="social__item social__item--facebook">
-        <a class="social__link" href="#">facebook</a>
+      <li class="page-footer__social-item page-footer__social-item--facebook">
+        <a class="page-footer__social-link" href="#">facebook</a>
       </li>
-      <li class="social__item social__item--instogramm">
-        <a class="social__link" href="#">instogram</a>
+      <li class="page-footer__social-item page-footer__social-item--instogramm">
+        <a class="page-footer__social-link" href="#">instogram</a>
       </li>
     </ul>
-    <div class="discount footer__discount">
-      <p class="discount__title">Давайте дружить, это выгодно!</p>
-      <p class="discount__description">Скидка 10% для друзей из социальных сетей.</p>
-    </div>
+    <p class="page-footer__discount">
+      <span class="page-footer__discount-title">Давайте дружить, это выгодно!</span>
+      <span class="page-footer__discount-description">Скидка 10% для друзей из социальных сетей.</span>
+    </p>
   </footer>
 </body>
 </html>

@@ -7,57 +7,63 @@
     <link href="assets/css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="header">
-      <a class="logo header__logo" href="index.html">Нердс</a>
-      <ul class="menu header__menu">
-        <li class="menu__item">
-          <a class="menu__link" href="#">Студия</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">Клиенты</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="catalog.html">Магазин</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">Контакты</a>
-        </li>
-      </ul>
-      <a class="cart header__cart" href="#">Корзина</a>
+    <header class="page-header">
+      <div class="page-header__top">
+        <a class="logo page-header__logo" href="index.html">Нердс</a>
+        <nav class="nav-main">
+          <ul class="nav-main__menu">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Студия</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Клиенты</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="catalog.html">Магазин</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <a class="nav-main__user-cart" href="#">Корзина</a>
+        </nav>
+      </div>
 
-      <div class="promo header__promo">
-        <div class="slider promo__slider">
-          <input class="visually-hidden" type="radio" name="slider" id="point1" checked>
-          <input class="visually-hidden" type="radio" name="slider" id="point2">
-          <input class="visually-hidden" type="radio" name="slider" id="point3">
-          <div class="slider__list">
-            <div class="slide slider__slide">
-              <h3 class="slide__title">Долго, дорого, скрупулезно</h3>
-              <p class="text slide__text">Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-              <img src="assets/img/nerds-index-slide1.png" width="698" height="413" alt="Смартфоны">
+      <div class="page-header__bottom">
+        <div class="promo">
+          <div class="slider promo__slider">
+            <input class="visually-hidden" type="radio" name="slider" id="point1" checked>
+            <input class="visually-hidden" type="radio" name="slider" id="point2">
+            <input class="visually-hidden" type="radio" name="slider" id="point3">
+            <div class="slider__list">
+              <div class="slide slider__slide">
+                <h3 class="slide__title">Долго, дорого, скрупулезно</h3>
+                <p class="text slide__text">Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+                <img src="assets/img/nerds-index-slide1.png" width="698" height="413" alt="Смартфоны">
+              </div>
+              <div class="slide slider__slide">
+                <h3 class="title slide__title">Любим математику как никто другой</h3>
+                <p class="text slide__text">Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
+                <img src="assets/img/nerds-index-slide2.png" width="663" height="430" alt="Мониторы">
+              </div>
+              <div class="slide slider__slide">
+                <h3 class="slide__title">Только ночь, только хардкор</h3>
+                <p class="slide__text">Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+                <img src="assets/img/nerds-index-slide3.png" width="759" height="411" alt="Планшеты">
+              </div>
             </div>
-            <div class="slide slider__slide">
-              <h3 class="title slide__title">Любим математику как никто другой</h3>
-              <p class="text slide__text">Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
-              <img src="assets/img/nerds-index-slide2.png" width="663" height="430" alt="Мониторы">
+            <div class="slider__nav">
+              <label class="slider__nav-button" for="point1">Первый слайд</label>
+              <label class="slider__nav-button" for="point2">Второй слайд</label>
+              <label class="slider__nav-button" for="point3">Третий слайд</label>
             </div>
-            <div class="slide slider__slide">
-              <h3 class="slide__title">Только ночь, только хардкор</h3>
-              <p class="slide__text">Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-              <img src="assets/img/nerds-index-slide3.png" width="759" height="411" alt="Планшеты">
-            </div>
+            <a class="button slider__button" href="#">Узнать больше</a>
           </div>
-          <div class="slider__nav">
-            <label class="slider__nav-button" for="point1">Первый слайд</label>
-            <label class="slider__nav-button" for="point2">Второй слайд</label>
-            <label class="slider__nav-button" for="point3">Третий слайд</label>
-          </div>
-          <a class="button slider__button" href="#">Узнать больше</a>
         </div>
       </div>
     </header>
 
-    <main class="main">
+    <main class="page-content">
       <h1 class="visually-hidden">Сайт Нердс</h1>
 
       <section class="services">
@@ -85,7 +91,7 @@
       <section class="about-us">
         <h2 class="visually-hidden">О нас</h2>
         <div class="company-description about-us__company-description">
-          <p class="company-description__title">Мы — маленькая, но гордая дизайн-студия из Краснодара. </p>
+          <strong class="company-description__title">Мы — маленькая, но гордая дизайн-студия из Краснодара. </strong>
           <p class="text company-description__text">Исповедуем принципы минимализма и чистоты. Ставим математически</p>
           <p class="company-description__title">Выполняем заказы на разработку:</p>
           <ul class="company-description__list">
@@ -140,34 +146,34 @@
 
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="map">Карта</div>
-        <div class="feedback">
-          <h3 class="feedback__title">NЁRDS DESIGN STUDIO</h3>
-          <p class="feedback__text">
-            <span class="feedback__address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
-            <span class="feedback__phone">тел. +7 (812) 275-75-75</span>
+        <div class="contacts__map">Карта</div>
+        <div class="contacts__feedback">
+          <h3 class="contacts__title">NЁRDS DESIGN STUDIO</h3>
+          <p class="contacts__text">
+            <span class="contacts__address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
+            <span class="contacts__phone">тел. +7 (812) 275-75-75</span>
           </p>
-          <a class="button" href="writeus.html">Напишите нам</a>
+          <a class="button contacts__button" href="writeus.html">Напишите нам</a>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <ul class="social-list footer__social-list">
-        <li class="social__item social__item--vk">
-          <a class="social__link" href="#">vk</a>
+    <footer class="page-footer">
+      <ul class="page-footer__social-list">
+        <li class="page-footer__social-item page-footer__social-item--vk">
+          <a class="page-footer__social-link" href="#">vk</a>
         </li>
-        <li class="social__item social__item--facebook">
-          <a class="social__link" href="#">facebook</a>
+        <li class="page-footer__social-item page-footer__social-item--facebook">
+          <a class="page-footer__social-link" href="#">facebook</a>
         </li>
-        <li class="social__item social__item--instogramm">
-          <a class="social__link" href="#">instogram</a>
+        <li class="page-footer__social-item page-footer__social-item--instogramm">
+          <a class="page-footer__social-link" href="#">instogram</a>
         </li>
       </ul>
-      <div class="discount footer__discount">
-        <p class="discount__title">Давайте дружить, это выгодно!</p>
-        <p class="discount__description">Скидка 10% для друзей из социальных сетей.</p>
-      </div>
+      <p class="page-footer__discount">
+        <span class="page-footer__discount-title">Давайте дружить, это выгодно!</span>
+        <span class="page-footer__discount-description">Скидка 10% для друзей из социальных сетей.</span>
+      </p>
     </footer>
   </body>
 </html>
