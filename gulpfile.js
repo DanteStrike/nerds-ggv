@@ -145,6 +145,7 @@ gulp.task('watch', function(){
 
 gulp.task('public', [
   'html:public',
+  'normoliz:public',
   'css:public',
   'js:public',
   'image:public'

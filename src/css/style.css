@@ -19,11 +19,11 @@
 @import url("../common.blocks/filter-title.css");
 @import url("../common.blocks/filters.css");
 @import url("../common.blocks/footer.css");
-@import url("../common.blocks/header.css");
+@import url("../common.blocks/page-header.css");
 @import url("../common.blocks/logo.css");
 @import url("../common.blocks/main.css");
 @import url("../common.blocks/map.css");
-@import url("../common.blocks/menu.css");
+@import url("../common.blocks/nav-main.css");
 @import url("../common.blocks/mesh.css");
 @import url("../common.blocks/meshes.css");
 @import url("../common.blocks/our-works.css");
