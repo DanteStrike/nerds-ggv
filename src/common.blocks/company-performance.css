@@ -1,0 +1,16 @@
+.company-performance {
+  width: 360px;
+}
+
+.company-performance > img {
+  margin-bottom: 24px;
+}
+
+.company-performance__table-title {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+
+  font-weight: 700;
+  text-transform: uppercase;
+}
