@@ -1,18 +1,12 @@
 .page-header {
   min-height: 120px;
-  color: #eeeeee;
+  padding-top: 49px;
+
+  background-color: #eeeeee;
 }
 
 .page-header__top {
   display: flex;
   justify-content: space-between;
   min-height: 65px;
-  margin-top: 49px;
 }
-
-.page-header__bottom {
-  display: flex;
-  justify-content: space-between;
-  min-height: 430px;
-}
-
