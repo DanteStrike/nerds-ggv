@@ -1,21 +1,23 @@
 .nav-main {
+  display: flex;
   margin: 0;
   padding: 0;
-  display: flex;
 }
 
 .nav-main__menu {
-  margin: 0;
-  padding: 0;
   display: flex;
-  list-style: none;
-  margin-right: 245px;
   justify-content: space-between;
+  margin: 0;
+  margin-right: 245px;
+  padding: 0;
+
+  list-style: none;
 }
 
 .nav-main__item {
   margin: 0;
   padding: 0;
+
   vertical-align: middle;
   text-align: center;
 }
@@ -25,11 +27,12 @@
 }
 
 .nav-main__link {
-  padding-top: 25px;
   display: block;
   min-height: 65px;
-  line-height: 30px;
+  padding-top: 25px;
+
   font-weight: 500;
+  line-height: 30px;
   color: #000000;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -41,6 +44,7 @@
 
 .nav-main__link:active {
   color: #000000;
+
   border-bottom: 1px solid #fb565a;
 }
 
