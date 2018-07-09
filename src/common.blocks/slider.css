@@ -1,9 +1,75 @@
-.dddd {
+.slider {
+  position: relative;
+}
+
+.slider__list {
+  width: 1160px;
+  min-height: 430px;
+}
+
+.slider__nav {
+  position: absolute;
+  bottom: 96px;
+  left: 50%;
+  z-index: 99;
+
+  display: flex;
+  justify-content: space-between;
+  width: 88px;
+  height: 18px;
+  margin-left: -44px;
+
+  font-size: 0;
+}
+
+.slider__nav-button {
   position: relative;
 
   display: block;
-  margin: 12px;
+  width: 18px;
+  height: 18px;
 
-  font-size: 20px;
-  font-family: "Courier New", Courier, monospace;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#point1:checked ~ .slider__nav .slider__nav-button--1::before,
+#point2:checked ~ .slider__nav .slider__nav-button--2::before,
+#point3:checked ~ .slider__nav .slider__nav-button--3::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+
+  background-color: #c1c1c1;
+  border-radius: 50%;
+}
+
+#point1:checked ~ .slider__nav .slider__nav-button--1::after,
+#point2:checked ~ .slider__nav .slider__nav-button--2::after,
+#point3:checked ~ .slider__nav .slider__nav-button--3::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: block;
+  width: 4px;
+  height: 4px;
+  margin: -2px 0 0 -2px;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.slider__button {
+  position: absolute;
+  bottom: 80px;
+  left: 0;
 }
