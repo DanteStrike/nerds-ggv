@@ -1,0 +1,7 @@
+.about-us {
+  display: flex;
+  justify-content: space-between;
+  min-height: 485px;
+
+  border-bottom: 2px solid #eeeeee;
+}
