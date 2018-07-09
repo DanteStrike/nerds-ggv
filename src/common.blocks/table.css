@@ -1,0 +1,30 @@
+.table {
+  padding: 0;
+
+  border-spacing: 0;
+}
+
+.table__header {
+  width: 115px;
+  height: 71px;
+  margin: 0;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1.5;
+  vertical-align: top;
+  text-align: left;
+}
+
+.special-percent {
+  margin: 0;
+  padding: 0;
+
+  font-size: 24px;
+  vertical-align: super;
+}
+
+.table__data {
+  line-height: 18px;
+}
