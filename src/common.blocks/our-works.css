@@ -14,12 +14,14 @@
 }
 
 .our-works__site {
+  position: relative;
+
   margin: 0;
   padding: 0;
 }
 
-.our-works__site {
-  position: relative;
+.our-works__site:not(:last-child) {
+  margin-right: 20px;
 }
 
 .our-works__site--right-border::before {
@@ -40,9 +42,10 @@
   position: relative;
 
   display: block;
-  width: 280px;
+  width: 260px;
   height: 180px;
   margin: 0;
+  margin-right: 20px;
   padding: 0;
 
   opacity: 0.2;
@@ -54,4 +57,9 @@
 
 .our-works__link:active {
   opacity: 0.1;
+}
+
+.our-works__link > img {
+  display: block;
+  margin: 0 auto;
 }
