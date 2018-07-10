@@ -112,6 +112,20 @@ img {
   text-align: center;
 }
 
+.colums {
+  display: flex;
+  justify-content: space-between;
+  min-height: 2217px;
+}
+
+.colums__col-1 {
+  width: 260px;
+}
+
+.colums__col-2 {
+  width: 760px;
+}
+
 .company-description {
   width: 680px;
   padding-top: 34px;
@@ -731,12 +745,90 @@ img {
   color: #283136;
 }
 
-.zzzz {
+.templates-catalog__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.templates-catalog__item {
   position: relative;
 
-  display: block;
-  margin: 12px;
+  width: 360px;
+  height: 616px;
+  margin: 0;
+  margin-right: 40px;
+  margin-bottom: 33px;
+  padding: 0;
 
-  font-size: 20px;
-  font-family: "Courier New", Courier, monospace;
+  cursor: pointer;
+}
+
+.templates-catalog__item:nth-child(2n) {
+  margin-right: 0;
+}
+
+.templates-catalog__item::before {
+  content: "";
+
+  display: block;
+  width: 360px;
+  height: 40px;
+
+  background-image: url("..\img\browser.svg");
+  opacity: 0.12;
+}
+
+.templates-catalog__item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 360px;
+  height: 576px;
+
+  border: 1px solid #eeeeee;
+}
+
+.templates-catalog__item:hover {
+  box-shadow: 0 6px 15px 0 rgba(0, 1, 1, 0.25);
+}
+
+.templates-catalog__item:hover .templates-catalog__item-hover {
+  z-index: 10;
+}
+
+.templates-catalog__item:hover::before {
+  opacity: 1;
+}
+
+.templates-catalog__item:hover::after {
+  border: none;
+}
+
+.templates-catalog__item-hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+
+  width: inherit;
+  min-height: 231px;
+  padding: 0 60px 0 60px;
+
+  text-align: center;
+
+  background-color: #eeeeee;
+}
+
+.templates-catalog__item-hover-price {
+  width: 200px;
+  margin: 0 auto;
+  padding: 0;
+
+  line-height: 18px;
 }
