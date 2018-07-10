@@ -1,5 +1,6 @@
 .colums {
   display: flex;
+  padding-top: 58px;
   justify-content: space-between;
   min-height: 2217px;
 }

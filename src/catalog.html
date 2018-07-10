@@ -131,23 +131,27 @@
         <div class="colums__col-2">
           <section class="sorting">
             <h2 class="sorting__title">Сортировать:</h2>
-            <ul class="sorting__parametors">
-              <li class="sorting__parametor">
-                <a class="sorting__link" href="#">По цене</a>
-              </li>
-              <li class="sorting__parametor">
-                <a class="sorting__link" href="#">По типу</a>
-              </li>
-              <li class="sorting__parametor">
-                <a class="sorting__link" href="#">По названию</a>
-              </li>
-              <li class="sorting__parametor">
-                <a class="sorting__link" href="#">По возрастанию</a>
-              </li>
-              <li class="sorting__parametor">
-                <a class="sorting__link" href="#">По убыванию</a>
-              </li>
-            </ul>
+            <div class="sorting__cotrols">
+              <ul class="sorting__parametors sorting__parametors--main">
+                <li class="sorting__parametor">
+                  <button class="sorting__button sorting__button--active" href="#">По цене</button>
+                </li>
+                <li class="sorting__parametor">
+                  <button class="sorting__button" href="#">По типу</button>
+                </li>
+                <li class="sorting__parametor">
+                  <button class="sorting__button" href="#">По названию</button>
+                </li>
+              </ul>
+              <ul class="sorting__parametors sorting__parametors--add">
+                <li class="sorting__parametor">
+                  <button class="sorting__button sorting__button--down sorting__button--svg sorting__button--active" href="#">По убыванию</button>
+                </li>
+                <li class="sorting__parametor">
+                  <button class="sorting__button sorting__button--up sorting__button--svg" href="#">По возрастанию</button>
+                </li>
+              </ul>
+            </div>
           </section>
 
           <section class="templates-catalog">

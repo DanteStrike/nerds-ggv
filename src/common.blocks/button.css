@@ -2,10 +2,10 @@
   display: block;
   width: 240px;
   min-height: 50px;
-  line-height: 50px;
   margin: 0;
   padding: 0;
 
+  line-height: 50px;
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
@@ -22,8 +22,9 @@
 
 .button:active {
   color: #e06366;
-  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+
   background-color: #d7373b;
+  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 }
 
 .button--green {
@@ -36,6 +37,7 @@
 
 .button--green:active {
   color: #4dc491;
+
   background-color: #00aa62;
 }
 
@@ -49,6 +51,7 @@
 
 .button--yellow:active {
   color: #ebba53;
+
   background-color: #e5a722;
 }
 
@@ -62,5 +65,6 @@
 
 .button--gray:active {
   color: #959595;
+
   background: #d5d5d5;
 }

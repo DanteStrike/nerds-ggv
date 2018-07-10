@@ -1,0 +1,89 @@
+.sorting {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: inherit;
+}
+
+.sorting__title {
+  width: 160px;
+  margin: 0;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.sorting__cotrols {
+  display: flex;
+  justify-content: space-between;
+  width: 360px;
+}
+
+.sorting__parametors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  padding-top: 1px;
+
+  list-style: none;
+}
+
+.sorting__parametors--main {
+  width: 271px;
+}
+
+.sorting__parametors--add {
+  padding-top: 4px;
+  width: 41px;
+}
+
+.sorting__button {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: inherit;
+  border: 0;
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.sorting__button:hover {
+  opacity: 0.6;
+}
+
+.sorting__button:active {
+  opacity: 1;
+}
+
+.sorting__button--active,
+.sorting__button--active:hover {
+  opacity: 1;
+  cursor: default;
+}
+
+.sorting__button--svg {
+  width: 11px;
+  height: 10px;
+  font-size: 0;
+}
+
+.sorting__button--up {
+  background-image: url(../img/icon-up-dir.png);
+}
+
+.sorting__button--down {
+  background-image: url(../img/icon-down-dir.png);
+}
