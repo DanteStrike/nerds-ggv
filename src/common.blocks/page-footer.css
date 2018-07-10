@@ -1,0 +1,110 @@
+.page-footer {
+  min-height: 217px;
+  padding-top: 69px;
+}
+
+.page-footer__colums {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 200px;
+}
+
+.page-footer__social-list {
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.page-footer__social-item {
+  margin: 0;
+  padding: 0;
+}
+
+.page-footer__social-link {
+  position: relative;
+
+  display: block;
+  width: 80px;
+  height: 79px;
+  margin: 0;
+  padding: 0;
+
+  background-color: #e1e1e1;
+  border-radius: 50%;
+}
+
+.page-footer__social-link:hover {
+  background-color: #e74246;
+}
+
+.page-footer__social-link:active {
+  background-color: #d7373b;
+}
+
+.page-footer__social-link:active::after {
+  opacity: 0.3;
+}
+
+.page-footer__social-link::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.page-footer__social-link--vk::after {
+  width: 26px;
+  height: 15px;
+  margin-top: -7.5px;
+  margin-left: -13px;
+
+  background-image: url("../img/vk-icon.svg");
+}
+
+.page-footer__social-link--fb::after {
+  width: 12px;
+  height: 22px;
+  margin-top: -11px;
+  margin-left: -6px;
+
+  background-image: url("../img/fb-icon.svg");
+}
+
+.page-footer__social-link--inst::after {
+  width: 21px;
+  height: 21px;
+  margin-top: -10.5px;
+  margin-left: -10.5px;
+
+  background-image: url("../img/insta-icon.svg");
+}
+
+.page-footer__discount {
+  width: 560px;
+  min-height: 79px;
+  margin: 0;
+  padding: 0;
+  padding-top: 4px;
+}
+
+.page-footer__discount-title {
+  display: block;
+  margin: 0;
+  margin-bottom: 8px;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.page-footer__discount-description {
+  display: block;
+
+  line-height: 22px;
+  color: #444444;
+}

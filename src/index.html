@@ -159,9 +159,11 @@
 
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts__map">Карта</div>
+        <div class="contacts__map" aria-label="Карта проезда">
+          <img src="assets/img/map.jpg" width="1440" height="416">
+        </div>
         <div class="contacts__feedback">
-          <h3 class="contacts__title">NЁRDS DESIGN STUDIO</h3>
+          <h3 class="contacts__title">Nёrds design studio</h3>
           <p class="contacts__text">
             <span class="contacts__address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
             <span class="contacts__phone">тел. +7 (812) 275-75-75</span>
@@ -172,21 +174,25 @@
     </main>
 
     <footer class="page-footer">
-      <ul class="page-footer__social-list">
-        <li class="page-footer__social-item page-footer__social-item--vk">
-          <a class="page-footer__social-link" href="#">vk</a>
-        </li>
-        <li class="page-footer__social-item page-footer__social-item--facebook">
-          <a class="page-footer__social-link" href="#">facebook</a>
-        </li>
-        <li class="page-footer__social-item page-footer__social-item--instogramm">
-          <a class="page-footer__social-link" href="#">instogram</a>
-        </li>
-      </ul>
-      <p class="page-footer__discount">
-        <span class="page-footer__discount-title">Давайте дружить, это выгодно!</span>
-        <span class="page-footer__discount-description">Скидка 10% для друзей из социальных сетей.</span>
-      </p>
+      <div class="container">
+        <div class="page-footer__colums">
+          <ul class="page-footer__social-list">
+            <li class="page-footer__social-item">
+              <a class="page-footer__social-link page-footer__social-link--vk" aria-label="vk" href="#"></a>
+            </li>
+            <li class="page-footer__social-item">
+              <a class="page-footer__social-link page-footer__social-link--fb" aria-label="facebook" href="#"></a>
+            </li>
+            <li class="page-footer__social-item">
+              <a class="page-footer__social-link page-footer__social-link--inst" aria-label="instogram" href="#"></a>
+            </li>
+          </ul>
+          <p class="page-footer__discount">
+            <span class="page-footer__discount-title">Давайте дружить, это выгодно!</span>
+            <span class="page-footer__discount-description">Скидка 10% для друзей из социальных сетей.</span>
+          </p>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
