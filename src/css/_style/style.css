@@ -145,6 +145,8 @@ img {
   margin-bottom: 24px;
   padding: 0;
   padding-left: 36px;
+
+  color: #283136;
 }
 
 .company-description__item::after {
@@ -545,6 +547,8 @@ img {
   margin: 0;
   margin-bottom: 33px;
   padding: 0;
+
+  color: #283136;
 }
 
 .service__button {
@@ -594,6 +598,8 @@ img {
   width: 460px;
   margin: 0;
   padding: 0;
+
+  color: #283136;
 }
 
 .slide > img {
@@ -710,6 +716,7 @@ img {
 
 .table__data {
   line-height: 18px;
+  color: #283136;
 }
 
 .zzzz {
