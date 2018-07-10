@@ -56,169 +56,171 @@
   </header>
 
   <main class="page-main">
-    <div class="colums">
-      <div class="colums__col-1">
-        <section class="filters colums__filters">
-          <h2 class="visually-hidden">Фильтры</h2>
-          <form class="filters__form-filters" method="get" action="https://echo.htmlacademy.ru">
-            <fieldset class="filter-cost filters__filter-cost">
-              <legend class="filter-title filter-cost__filter-title">Стоимость:</legend>
-              <div class="range-slider filter-cost__range-slider">
-                <div class="range-slider__bar">
-                  <div class="range-slider__scale"></div>
+    <div class="container">
+      <div class="colums">
+        <div class="colums__col-1">
+          <section class="filters colums__filters">
+            <h2 class="visually-hidden">Фильтры</h2>
+            <form class="filters__form-filters" method="get" action="https://echo.htmlacademy.ru">
+              <fieldset class="filter-cost filters__filter-cost">
+                <legend class="filter-title filter-cost__filter-title">Стоимость:</legend>
+                <div class="range-slider filter-cost__range-slider">
+                  <div class="range-slider__bar">
+                    <div class="range-slider__scale"></div>
+                  </div>
+                  <div class="range-slider__toggle range-slider__toggle--min"></div>
+                  <div class="range-slider__toggle range-slider__toggle--max"></div>
                 </div>
-                <div class="range-slider__toggle range-slider__toggle--min"></div>
-                <div class="range-slider__toggle range-slider__toggle--max"></div>
-              </div>
-              <div class="price filter-cost__price">
-                <label class="price__min" for="i_min">ОТ</label>
-                <input class="price__min" id="i_min" name="min" type="text" value="0">
-                <label class="price__maх" for="i_mах">ДО</label>
-                <input class="price__max" id="i_mах" name="max" type="text" value="30000">
-              </div>
-            </fieldset>
+                <div class="price filter-cost__price">
+                  <label class="price__min" for="i_min">ОТ</label>
+                  <input class="price__min" id="i_min" name="min" type="text" value="0">
+                  <label class="price__maх" for="i_mах">ДО</label>
+                  <input class="price__max" id="i_mах" name="max" type="text" value="30000">
+                </div>
+              </fieldset>
 
-            <fieldset class="filter-meshes filters__filter-meshes">
-              <legend class="filter-title filter-mesh__filter-title">Сетка:</legend>
-              <ul class="meshes">
-                <li class="mesh">
-                  <input class="visually-hidden mesh__radio-button" id="adaptive" type="radio" name="meshes-group" checked>
-                  <label for="adaptive" class="mesh__name">Адаптивная</label>
-                </li>
-                <li class="mesh">
-                  <input class="visually-hidden mesh__radio-button" id="fixed" type="radio" name="meshes-group" checked>
-                  <label for="fixed" class="mesh__name">Фиксированная</label>
-                </li>
-                <li class="mesh">
-                  <input class="visually-hidden mesh__radio-button" id="rubber" type="radio" name="meshes-group" checked>
-                  <label for="rubber" class="mesh__name">Резиновая</label>
-                </li>
-              </ul>
-            </fieldset>
+              <fieldset class="filter-meshes filters__filter-meshes">
+                <legend class="filter-title filter-mesh__filter-title">Сетка:</legend>
+                <ul class="meshes">
+                  <li class="mesh">
+                    <input class="visually-hidden mesh__radio-button" id="adaptive" type="radio" name="meshes-group" checked>
+                    <label for="adaptive" class="mesh__name">Адаптивная</label>
+                  </li>
+                  <li class="mesh">
+                    <input class="visually-hidden mesh__radio-button" id="fixed" type="radio" name="meshes-group" checked>
+                    <label for="fixed" class="mesh__name">Фиксированная</label>
+                  </li>
+                  <li class="mesh">
+                    <input class="visually-hidden mesh__radio-button" id="rubber" type="radio" name="meshes-group" checked>
+                    <label for="rubber" class="mesh__name">Резиновая</label>
+                  </li>
+                </ul>
+              </fieldset>
 
-            <fieldset class="filter-specifications filters__filter-specifications">
-              <legend class="filter-title filter-specifications__filter-title">Особенности:</legend>
-              <ul class="specifications">
-                <li class="specification">
-                  <input class="visually-hidden specification__check-box" id="slider" type="radio" name="specifications-group" checked>
-                  <label for="slider" class="specification__name">Слайдер</label>
-                </li>
-                <li class="specification">
-                  <input class="visually-hidden specification__check-box" id="block-advatages" type="radio" name="specifications-group" checked>
-                  <label for="block-advatages" class="specification__name">Блок преимуществ</label>
-                </li>
-                <li class="specification">
-                  <input class="visually-hidden specification__check-box" id="news" type="radio" name="specifications-group" checked>
-                  <label for="news" class="specification__name">Новости</label>
-                </li>
-                <li class="specification">
-                  <input class="visually-hidden specification__check-box" id="gallary" type="radio" name="specifications-group" checked>
-                  <label for="slider" class="specification__name">Галерея</label>
-                </li>
-                <li class="specification">
-                  <input class="visually-hidden specification__check-box" id="cart" type="radio" name="specifications-group" checked>
-                  <label for="cart" class="specification__name">Корзина</label>
-                </li>
-              </ul>
-            </fieldset>
+              <fieldset class="filter-specifications filters__filter-specifications">
+                <legend class="filter-title filter-specifications__filter-title">Особенности:</legend>
+                <ul class="specifications">
+                  <li class="specification">
+                    <input class="visually-hidden specification__check-box" id="slider" type="radio" name="specifications-group" checked>
+                    <label for="slider" class="specification__name">Слайдер</label>
+                  </li>
+                  <li class="specification">
+                    <input class="visually-hidden specification__check-box" id="block-advatages" type="radio" name="specifications-group" checked>
+                    <label for="block-advatages" class="specification__name">Блок преимуществ</label>
+                  </li>
+                  <li class="specification">
+                    <input class="visually-hidden specification__check-box" id="news" type="radio" name="specifications-group" checked>
+                    <label for="news" class="specification__name">Новости</label>
+                  </li>
+                  <li class="specification">
+                    <input class="visually-hidden specification__check-box" id="gallary" type="radio" name="specifications-group" checked>
+                    <label for="slider" class="specification__name">Галерея</label>
+                  </li>
+                  <li class="specification">
+                    <input class="visually-hidden specification__check-box" id="cart" type="radio" name="specifications-group" checked>
+                    <label for="cart" class="specification__name">Корзина</label>
+                  </li>
+                </ul>
+              </fieldset>
 
-            <button class="button filters__button" type="submit">Показать</button>
-          </form>
-        </section>
+              <button class="button filters__button" type="submit">Показать</button>
+            </form>
+          </section>
+        </div>
+
+        <div class="colums__col-2">
+          <section class="sorting">
+            <h2 class="sorting__title">Сортировать:</h2>
+            <ul class="sorting__parametors">
+              <li class="sorting__parametor">
+                <a class="sorting__link" href="#">По цене</a>
+              </li>
+              <li class="sorting__parametor">
+                <a class="sorting__link" href="#">По типу</a>
+              </li>
+              <li class="sorting__parametor">
+                <a class="sorting__link" href="#">По названию</a>
+              </li>
+              <li class="sorting__parametor">
+                <a class="sorting__link" href="#">По возрастанию</a>
+              </li>
+              <li class="sorting__parametor">
+                <a class="sorting__link" href="#">По убыванию</a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="templates-catalog">
+            <h2 class="visually-hidden">Каталог шаблонов</h2>
+            <ul class="templates-catalog__list">
+              <li class="templates-catalog__item">
+                <img src="assets/img/works-sedona.jpg" width="360" height="576" alt="Седона">
+                <div class="template-hover">
+                  <h3 class="template-hover__title">Sedona</h3>
+                  <p class="template-hover__description">Информационный сайт для туристов</p>
+                  <button class="template-hover__price button">9 900 руб.</button>
+                </div>
+              </li>
+              <li class="templates-catalog__item">
+                <img src="assets/img/works-pink.jpg" width="360" height="576" alt="Pink App">
+                <div class="template-hover">
+                  <h3 class="template-hover__title">Pink App</h3>
+                  <p class="template-hover__description">Продуктовый лендинг приложения для iOS и Android</p>
+                  <button class="template-hover__price button">9 900 руб.</button>
+                </div>
+              </li>
+              <li class="templates-catalog__item">
+                <img src="assets/img/works-borodinski.jpg" width="360" height="576" alt="Barbershop">
+                <div class="template-hover">
+                  <h3 class="template-hover__title">Barbershop</h3>
+                  <p class="template-hover__description">Сайт салоны красоты. Для мужчин, да.</p>
+                  <button class="template-hover__price button">9 900 руб.</button>
+                </div>
+              </li>
+              <li class="templates-catalog__item">
+                <img src="assets/img/works-mishka.jpg" width="360" height="576" alt="Mishka">
+                <div class="template-hover">
+                  <h3 class="template-hover__title">Mishka</h3>
+                  <p class="template-hover__description">Интернет-магазин вязаных игрушек</p>
+                  <button class="template-hover__price button">9 900 руб.</button>
+                </div>
+              </li>
+              <li class="templates-catalog__item">
+                <img src="assets/img/works-aplus.jpg" width="360" height="576" alt="A Plus">
+                <div class="template-hover">
+                  <h3 class="template-hover__title">A Plus</h3>
+                  <p class="template-hover__description">Лендинг курсов повышения квалификации</p>
+                  <button class="template-hover__price button">9 900 руб.</button>
+                </div>
+              </li>
+              <li class="templates-catalog__item">
+                <img src="assets/img/works-kvas.jpg" width="360" height="576" alt="Квас">
+                <div class="template-hover">
+                  <h3 class="template-hover__title">Кваст</h3>
+                  <p class="template-hover__description">Промо-сайт производителя крафтового кваса</p>
+                  <button class="template-hover__price button">9 900 руб.</button>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <ul class="pagination-list">
+            <li class="pagination-list__item pagination-list__item--current">
+              <a class="button pagination-list__button">1</a>
+            </li>
+            <li class="pagination-list__item">
+              <a class="button pagination-list__button" href="#">2</a>
+            </li>
+            <li class="pagination-list__item">
+              <a class="button pagination-list__button" href="#">3</a>
+            </li>
+            <li class="pagination-list__item pagination-list__item--last">
+              <a class="button pagination-list__button" href="#">Следующая</a>
+            </li>
+          </ul>
+        </div>
       </div>
-
-      <div class="colums__col-2">
-        <section class="sorting">
-          <h2 class="sorting__title">Сортировать:</h2>
-          <ul class="sorting__parametors">
-            <li class="sorting__parametor">
-              <a class="sorting__link" href="#">По цене</a>
-            </li>
-            <li class="sorting__parametor">
-              <a class="sorting__link" href="#">По типу</a>
-            </li>
-            <li class="sorting__parametor">
-              <a class="sorting__link" href="#">По названию</a>
-            </li>
-            <li class="sorting__parametor">
-              <a class="sorting__link" href="#">По возрастанию</a>
-            </li>
-            <li class="sorting__parametor">
-              <a class="sorting__link" href="#">По убыванию</a>
-            </li>
-          </ul>
-        </section>
-
-        <section class="templates-catalog">
-          <h2 class="visually-hidden">Каталог шаблонов</h2>
-          <ul class="templates-catalog__list">
-            <li class="templates-catalog__item">
-              <img src="assets/img/works-sedona.jpg" width="360" height="576" alt="Седона">
-              <div class="template-hover">
-                <h3 class="template-hover__title">Sedona</h3>
-                <p class="template-hover__description">Информационный сайт для туристов</p>
-                <button class="template-hover__price button">9 900 руб.</button>
-              </div>
-            </li>
-            <li class="templates-catalog__item">
-              <img src="assets/img/works-pink.jpg" width="360" height="576" alt="Pink App">
-              <div class="template-hover">
-                <h3 class="template-hover__title">Pink App</h3>
-                <p class="template-hover__description">Продуктовый лендинг приложения для iOS и Android</p>
-                <button class="template-hover__price button">9 900 руб.</button>
-              </div>
-            </li>
-            <li class="templates-catalog__item">
-              <img src="assets/img/works-borodinski.jpg" width="360" height="576" alt="Barbershop">
-              <div class="template-hover">
-                <h3 class="template-hover__title">Barbershop</h3>
-                <p class="template-hover__description">Сайт салоны красоты. Для мужчин, да.</p>
-                <button class="template-hover__price button">9 900 руб.</button>
-              </div>
-            </li>
-            <li class="templates-catalog__item">
-              <img src="assets/img/works-mishka.jpg" width="360" height="576" alt="Mishka">
-              <div class="template-hover">
-                <h3 class="template-hover__title">Mishka</h3>
-                <p class="template-hover__description">Интернет-магазин вязаных игрушек</p>
-                <button class="template-hover__price button">9 900 руб.</button>
-              </div>
-            </li>
-            <li class="templates-catalog__item">
-              <img src="assets/img/works-aplus.jpg" width="360" height="576" alt="A Plus">
-              <div class="template-hover">
-                <h3 class="template-hover__title">A Plus</h3>
-                <p class="template-hover__description">Лендинг курсов повышения квалификации</p>
-                <button class="template-hover__price button">9 900 руб.</button>
-              </div>
-            </li>
-            <li class="templates-catalog__item">
-              <img src="assets/img/works-kvas.jpg" width="360" height="576" alt="Квас">
-              <div class="template-hover">
-                <h3 class="template-hover__title">Кваст</h3>
-                <p class="template-hover__description">Промо-сайт производителя крафтового кваса</p>
-                <button class="template-hover__price button">9 900 руб.</button>
-              </div>
-            </li>
-          </ul>
-        </section>
-
-        <ul class="pagination-list">
-         <li class="pagination-list__item pagination-list__item--current">
-          <a class="button pagination-list__button">1</a>
-        </li>
-        <li class="pagination-list__item">
-          <a class="button pagination-list__button" href="#">2</a>
-        </li>
-        <li class="pagination-list__item">
-          <a class="button pagination-list__button" href="#">3</a>
-        </li>
-        <li class="pagination-list__item pagination-list__item--last">
-          <a class="button pagination-list__button" href="#">Следующая</a>
-        </li>
-      </ul>
     </div>
-
 
     <section class="contacts">
       <h2 class="visually-hidden">Контакты</h2>
