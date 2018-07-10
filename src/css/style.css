@@ -6,6 +6,7 @@
 @import url("../common.blocks/about-us.css");
 @import url("../common.blocks/button.css");
 @import url("../common.blocks/cart.css");
+@import url("../common.blocks/catalog-title.css");
 @import url("../common.blocks/colums.css");
 @import url("../common.blocks/company-description.css");
 @import url("../common.blocks/company-performance.css");
@@ -21,7 +22,7 @@
 @import url("../common.blocks/page-footer.css");
 @import url("../common.blocks/page-header.css");
 @import url("../common.blocks/logo.css");
-@import url("../common.blocks/main.css");
+@import url("../common.blocks/page-main.css");
 @import url("../common.blocks/map.css");
 @import url("../common.blocks/nav-main.css");
 @import url("../common.blocks/mesh.css");
