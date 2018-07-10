@@ -60,7 +60,7 @@ img {
 .about-us {
   display: flex;
   justify-content: space-between;
-  min-height: 485px;
+  min-height: 487px;
 
   border-bottom: 2px solid #eeeeee;
 }
@@ -70,7 +70,7 @@ img {
   width: 240px;
   min-height: 50px;
   margin: 0;
-  padding: 17px 0 15px 0;
+  padding: 13px 0 0 0;
 
   text-align: center;
   color: #ffffff;
@@ -102,13 +102,13 @@ img {
 
 .company-description {
   width: 680px;
-  padding-top: 33px;
+  padding-top: 34px;
 }
 
 .company-description__title {
   display: block;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 33px;
   padding: 0;
 
   font-weight: 500;
@@ -118,7 +118,7 @@ img {
 
 .company-description__text {
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 39px;
   padding: 0;
 }
 
@@ -133,15 +133,31 @@ img {
 
 .company-description__list {
   margin: 0;
-  margin-bottom: 74px;
   padding: 0;
 
   list-style: none;
 }
 
 .company-description__item {
-  margin-bottom: 22px;
-  padding-left: 37px;
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
+  padding-left: 36px;
+}
+
+.company-description__item::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 1px;
+
+  width: 25px;
+  height: 2px;
+  margin-top: -1px;
+
+  background-image: url("..\img\red-line.svg");
 }
 
 .company-performance {
@@ -149,13 +165,14 @@ img {
 }
 
 .company-performance > img {
-  margin-bottom: 24px;
+  margin-bottom: 28.5px;
 }
 
 .company-performance__table-title {
   margin: 0;
   margin-bottom: 30px;
   padding: 0;
+  padding-left: 16px;
 
   font-weight: 700;
   text-transform: uppercase;
@@ -176,14 +193,14 @@ img {
 
   width: 320px;
   height: 308px;
-  padding: 48px 50px;
+  padding: 49px 50px;
 
   background-color: #ffffff;
 }
 
 .contacts__title {
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
   padding: 0;
 
   font-weight: 700;
@@ -196,16 +213,17 @@ img {
   width: 210px;
   height: 80px;
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 30px;
   padding: 0;
 
+  line-height: 18px;
   color: #666666;
 }
 
 .contacts__address {
   display: block;
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 18px;
   padding: 0;
 }
 
@@ -217,6 +235,7 @@ img {
 
 .contacts__button {
   width: 220px;
+  padding-right: 2px;
 }
 
 .page-footer {
@@ -249,7 +268,7 @@ img {
   position: relative;
 
   display: block;
-  width: 80px;
+  width: 79px;
   height: 79px;
   margin: 0;
   padding: 0;
@@ -309,13 +328,13 @@ img {
   min-height: 79px;
   margin: 0;
   padding: 0;
-  padding-top: 4px;
+  padding-top: 5px;
 }
 
 .page-footer__discount-title {
   display: block;
   margin: 0;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   padding: 0;
 
   font-weight: 700;
@@ -360,15 +379,18 @@ img {
 
 .nav-main {
   display: flex;
+  justify-content: space-between;
+  width: 798px;
   margin: 0;
   padding: 0;
 }
 
 .nav-main__menu {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  width: 440px;
   margin: 0;
-  margin-right: 245px;
   padding: 0;
 
   list-style: none;
@@ -389,13 +411,12 @@ img {
 .nav-main__link {
   display: block;
   min-height: 65px;
-  padding-top: 25px;
+  padding-top: 26px;
 
   font-weight: 500;
   line-height: 30px;
   color: #000000;
   text-transform: uppercase;
-  word-wrap: break-word;
 }
 
 .nav-main__link:hover {
@@ -409,7 +430,21 @@ img {
 }
 
 .nav-main__link--cart {
+  position: relative;
+
+  width: 115px;
   padding-left: 40px;
+}
+
+.nav-main__svg {
+  position: absolute;
+  top: 33px;
+  left: 0;
+
+  width: 15px;
+  height: 15px;
+
+  fill: #a6a6a6;
 }
 
 .our-works {
@@ -485,13 +520,13 @@ img {
 
 .service > img {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   padding: 0;
 }
 
 .service__title {
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
   padding: 0;
 
   font-weight: 700;
@@ -501,8 +536,9 @@ img {
 }
 
 .service__text {
+  width: 246px;
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 33px;
   padding: 0;
 }
 
@@ -513,8 +549,9 @@ img {
 .services {
   display: flex;
   justify-content: space-between;
+  min-height: 509px;
   margin-bottom: 40px;
-  padding: 80px 60px 80px 0;
+  padding: 80px 60px 0 0;
 
   border-bottom: 2px solid #eeeeee;
 }
@@ -538,9 +575,9 @@ img {
 .slide__title {
   width: 520px;
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
   padding: 0;
-  padding-top: 75px;
+  padding-top: 78px;
 
   font-weight: 500;
   font-size: 55px;
@@ -556,7 +593,7 @@ img {
 
 .slide > img {
   position: absolute;
-  top: 0;
+  top: 1px;
   left: 400px;
 
   min-width: 760px;
@@ -568,7 +605,7 @@ img {
 
 .slider__list {
   width: 1160px;
-  min-height: 430px;
+  min-height: 431px;
 }
 
 .slider__nav {
@@ -646,7 +683,7 @@ img {
 
 .table__header {
   width: 115px;
-  height: 71px;
+  height: 74px;
   margin: 0;
   padding: 0;
 
@@ -657,7 +694,7 @@ img {
   text-align: left;
 }
 
-.special-percent {
+.table__special-percent {
   margin: 0;
   padding: 0;
 
