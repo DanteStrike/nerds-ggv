@@ -3,14 +3,14 @@
 }
 
 .company-performance > img {
-  margin-bottom: 24px;
+  margin-bottom: 28.5px;
 }
 
 .company-performance__table-title {
   margin: 0;
   margin-bottom: 30px;
   padding: 0;
-
+  padding-left: 16px;
   font-weight: 700;
   text-transform: uppercase;
 }

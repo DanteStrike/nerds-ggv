@@ -13,14 +13,14 @@
 
   width: 320px;
   height: 308px;
-  padding: 48px 50px;
+  padding: 49px 50px;
 
   background-color: #ffffff;
 }
 
 .contacts__title {
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
   padding: 0;
 
   font-weight: 700;
@@ -33,24 +33,27 @@
   width: 210px;
   height: 80px;
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 30px;
   padding: 0;
+
+  line-height: 18px;
   color: #666666;
 }
 
 .contacts__address {
-  margin: 0;
-  padding: 0;
   display: block;
-  margin-bottom: 10px;
+  margin: 0;
+  margin-bottom: 18px;
+  padding: 0;
 }
 
 .contacts__phone {
+  display: block;
   margin: 0;
   padding: 0;
-  display: block;
 }
 
 .contacts__button {
   width: 220px;
+  padding-right: 2px;
 }
