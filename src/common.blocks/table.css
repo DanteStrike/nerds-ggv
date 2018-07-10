@@ -6,7 +6,7 @@
 
 .table__header {
   width: 115px;
-  height: 71px;
+  height: 74px;
   margin: 0;
   padding: 0;
 
@@ -17,7 +17,7 @@
   text-align: left;
 }
 
-.special-percent {
+.table__special-percent {
   margin: 0;
   padding: 0;
 
