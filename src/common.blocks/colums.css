@@ -1,0 +1,13 @@
+.colums {
+  display: flex;
+  justify-content: space-between;
+  min-height: 2217px;
+}
+
+.colums__col-1 {
+  width: 260px;
+}
+
+.colums__col-2 {
+  width: 760px;
+}
