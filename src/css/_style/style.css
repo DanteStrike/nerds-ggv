@@ -456,6 +456,7 @@ img {
 
 .our-works__list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
   padding: 0;
@@ -499,6 +500,10 @@ img {
   padding: 0;
 
   opacity: 0.2;
+}
+
+.our-works__link--last {
+  margin-right: 0;
 }
 
 .our-works__link:hover {
@@ -548,6 +553,7 @@ img {
 
 .services {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   min-height: 509px;
   margin-bottom: 40px;
@@ -586,7 +592,6 @@ img {
 
 .slide__text {
   width: 460px;
-  min-height: 65px;
   margin: 0;
   padding: 0;
 }
@@ -615,6 +620,7 @@ img {
   z-index: 99;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 88px;
   height: 18px;

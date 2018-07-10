@@ -1,14 +1,17 @@
 .nav-main {
   display: flex;
+  justify-content: space-between;
+  width: 798px;
   margin: 0;
   padding: 0;
 }
 
 .nav-main__menu {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  width: 440px;
   margin: 0;
-  margin-right: 245px;
   padding: 0;
 
   list-style: none;
@@ -29,13 +32,12 @@
 .nav-main__link {
   display: block;
   min-height: 65px;
-  padding-top: 25px;
+  padding-top: 26px;
 
   font-weight: 500;
   line-height: 30px;
   color: #000000;
   text-transform: uppercase;
-  word-wrap: break-word;
 }
 
 .nav-main__link:hover {
@@ -49,5 +51,19 @@
 }
 
 .nav-main__link--cart {
+  position: relative;
+
+  width: 115px;
   padding-left: 40px;
+}
+
+.nav-main__svg {
+  position: absolute;
+  top: 33px;
+  left: 0;
+
+  width: 15px;
+  height: 15px;
+
+  fill: #a6a6a6;
 }
