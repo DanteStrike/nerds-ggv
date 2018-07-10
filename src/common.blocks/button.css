@@ -2,8 +2,9 @@
   display: block;
   width: 240px;
   min-height: 50px;
+  line-height: 50px;
   margin: 0;
-  padding: 13px 0 0 0;
+  padding: 0;
 
   text-align: center;
   color: #ffffff;
@@ -21,7 +22,7 @@
 
 .button:active {
   color: #e06366;
-
+  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
   background-color: #d7373b;
 }
 
@@ -29,6 +30,37 @@
   background-color: #00ca74;
 }
 
+.button--green:hover {
+  background-color: #00bc6c;
+}
+
+.button--green:active {
+  color: #4dc491;
+  background-color: #00aa62;
+}
+
 .button--yellow {
   background-color: #efc84a;
+}
+
+.button--yellow:hover {
+  background-color: #eab534;
+}
+
+.button--yellow:active {
+  color: #ebba53;
+  background-color: #e5a722;
+}
+
+.button--gray {
+  background: #eeeeee;
+}
+
+.button--gray:hover {
+  background: #dfdfdf;
+}
+
+.button--gray:active {
+  color: #959595;
+  background: #d5d5d5;
 }

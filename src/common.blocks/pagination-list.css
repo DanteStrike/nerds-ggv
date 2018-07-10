@@ -1,0 +1,38 @@
+.pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: inherit;
+
+  list-style: none;
+}
+
+.pagination-list__item {
+  margin-right: 11px;
+}
+
+.pagination-list__item:last-child {
+  margin-right: 0;
+}
+
+.pagination-list__button {
+  width: 50px;
+
+  font-weight: 500;
+  color: #000000;
+}
+
+.pagination-list__button--current,
+.pagination-list__button--current:hover,
+.pagination-list__button--current:active {
+  line-height: 44px;
+  color: #000000;
+
+  background-color: #ffffff;
+  border: 3px solid #dbdbdb;
+  box-shadow: none;
+  cursor: default;
+}
+
+.pagination-list__button--last {
+  width: 260px;
+}

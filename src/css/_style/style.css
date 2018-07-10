@@ -70,8 +70,9 @@ img {
   width: 240px;
   min-height: 50px;
   margin: 0;
-  padding: 13px 0 0 0;
+  padding: 0;
 
+  line-height: 50px;
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
@@ -90,14 +91,49 @@ img {
   color: #e06366;
 
   background-color: #d7373b;
+  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 }
 
 .button--green {
   background-color: #00ca74;
 }
 
+.button--green:hover {
+  background-color: #00bc6c;
+}
+
+.button--green:active {
+  color: #4dc491;
+
+  background-color: #00aa62;
+}
+
 .button--yellow {
   background-color: #efc84a;
+}
+
+.button--yellow:hover {
+  background-color: #eab534;
+}
+
+.button--yellow:active {
+  color: #ebba53;
+
+  background-color: #e5a722;
+}
+
+.button--gray {
+  background: #eeeeee;
+}
+
+.button--gray:hover {
+  background: #dfdfdf;
+}
+
+.button--gray:active {
+  color: #959595;
+
+  background: #d5d5d5;
 }
 
 .catalog-title {
@@ -547,6 +583,45 @@ img {
   margin: 0 auto;
 }
 
+.pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: inherit;
+
+  list-style: none;
+}
+
+.pagination-list__item {
+  margin-right: 11px;
+}
+
+.pagination-list__item:last-child {
+  margin-right: 0;
+}
+
+.pagination-list__button {
+  width: 50px;
+
+  font-weight: 500;
+  color: #000000;
+}
+
+.pagination-list__button--current,
+.pagination-list__button--current:hover,
+.pagination-list__button--current:active {
+  line-height: 44px;
+  color: #000000;
+
+  background-color: #ffffff;
+  border: 3px solid #dbdbdb;
+  box-shadow: none;
+  cursor: default;
+}
+
+.pagination-list__button--last {
+  width: 260px;
+}
+
 .service {
   width: 300px;
 }
@@ -749,6 +824,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
+  margin-bottom: 27px;
   padding: 0;
 
   list-style: none;
@@ -788,6 +864,7 @@ img {
   bottom: 0;
   left: 0;
 
+  display: block;
   width: 360px;
   height: 576px;
 
@@ -807,7 +884,7 @@ img {
 }
 
 .templates-catalog__item:hover::after {
-  border: none;
+  display: none;
 }
 
 .templates-catalog__item-hover {
