@@ -76,7 +76,11 @@ const config = {
 
 const svgSpriteConfig = {
   mode: {
-    css: { // Activate the «css» mode
+    css: {
+      dest: "./",
+      layout: "diagonal",
+      bust: false,
+      sprite: "sprite.svg",
       render: {
         css: true // Activate CSS output (with default options)
       }
@@ -148,8 +152,7 @@ gulp.task('svgSpriteCreate', function () {
 });
 
 gulp.task('svgSprite', ['svgSpriteCreate'], function () {
-  return gulp.src('src/sprite/css/svg/sprite.css-03f10c0d.svg')
-  .pipe(rename('sprite.svg'))
+  return gulp.src('src/sprite/sprite.svg')
   .pipe(gulp.dest('src/img'));
 });
 

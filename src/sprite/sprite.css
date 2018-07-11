@@ -1,0 +1,36 @@
+.svg-check-off {
+	background: url("sprite.svg") 0 0 no-repeat;
+}
+
+.svg-check-off-dims {
+	width: 23px;
+	height: 23px;
+}
+
+.svg-check-on {
+	background: url("sprite.svg") 31.506849315068493% 31.506849315068493% no-repeat;
+}
+
+.svg-check-on-dims {
+	width: 27px;
+	height: 23px;
+}
+
+.svg-radio-off {
+	background: url("sprite.svg") 66.66666666666667% 64.78873239436619% no-repeat;
+}
+
+.svg-radio-off-dims {
+	width: 25px;
+	height: 25px;
+}
+
+.svg-radio-on {
+	background: url("sprite.svg") 100% 100% no-repeat;
+}
+
+.svg-radio-on-dims {
+	width: 25px;
+	height: 25px;
+}
+
