@@ -2,6 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   width: inherit;
+  margin: 0;
+  padding: 0;
 
   list-style: none;
 }
@@ -16,16 +18,12 @@
 
 .pagination-list__button {
   width: 50px;
-
-  font-weight: 500;
-  color: #000000;
 }
 
 .pagination-list__button--current,
 .pagination-list__button--current:hover,
 .pagination-list__button--current:active {
   line-height: 44px;
-  color: #000000;
 
   background-color: #ffffff;
   border: 3px solid #dbdbdb;
