@@ -1,0 +1,20 @@
+.filters__form-filters {
+  margin: 0;
+  padding: 0;
+}
+
+.filters__filter-cost {
+  margin-bottom: 60px;
+}
+
+.filters__filter-meshes {
+  margin-bottom: 48px;
+}
+
+.filters__filter-specifications {
+  margin-bottom: 48px;
+}
+
+.filters__button {
+  width: 260px;
+}

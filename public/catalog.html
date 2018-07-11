@@ -80,18 +80,18 @@
               </fieldset>
 
               <fieldset class="filter-meshes filters__filter-meshes">
-                <legend class="filter-title filter-mesh__filter-title">Сетка:</legend>
+                <legend class="filter-title filter-meshes__filter-title">Сетка:</legend>
                 <ul class="filter-meshes__list">
                   <li class="filter-meshes__item">
-                    <input class="visually-hidden mesh__radio-button" id="adaptive" type="radio" name="meshes-group" checked>
+                    <input class="visually-hidden filter-meshes__radio-button" id="adaptive" type="radio" name="meshes-group" value="0" checked>
                     <label for="adaptive" class="filter-meshes__item-name">Адаптивная</label>
                   </li>
                   <li class="filter-meshes__item">
-                    <input class="visually-hidden mesh__radio-button" id="fixed" type="radio" name="meshes-group" checked>
+                    <input class="visually-hidden filter-meshes__radio-button" id="fixed" type="radio" value="1" name="meshes-group">
                     <label for="fixed" class="filter-meshes__item-name">Фиксированная</label>
                   </li>
                   <li class="filter-meshes__item">
-                    <input class="visually-hidden mesh__radio-button" id="rubber" type="radio" name="meshes-group" checked>
+                    <input class="visually-hidden filter-meshes__radio-button" id="rubber" type="radio" value="2" name="meshes-group">
                     <label for="rubber" class="filter-meshes__item-name">Резиновая</label>
                   </li>
                 </ul>
@@ -99,26 +99,26 @@
 
               <fieldset class="filter-specifications filters__filter-specifications">
                 <legend class="filter-title filter-specifications__filter-title">Особенности:</legend>
-                <ul class="specifications">
-                  <li class="specification">
-                    <input class="visually-hidden specification__check-box" id="slider" type="radio" name="specifications-group" checked>
-                    <label for="slider" class="specification__name">Слайдер</label>
+                <ul class="filter-specifications__list">
+                  <li class="filter-specifications__item">
+                    <input class="visually-hidden filter-specifications__check-box" id="slider" type="checkbox" value="0" name="specifications-group" checked>
+                    <label for="slider" class="filter-specifications__item-name">Слайдер</label>
                   </li>
-                  <li class="specification">
-                    <input class="visually-hidden specification__check-box" id="block-advatages" type="radio" name="specifications-group" checked>
-                    <label for="block-advatages" class="specification__name">Блок преимуществ</label>
+                  <li class="filter-specifications__item">
+                    <input class="visually-hidden filter-specifications__check-box" id="block-advatages" type="checkbox" value="1" name="specifications-group" >
+                    <label for="block-advatages" class="filter-specifications__item-name">Блок преимуществ</label>
                   </li>
-                  <li class="specification">
-                    <input class="visually-hidden specification__check-box" id="news" type="radio" name="specifications-group" checked>
-                    <label for="news" class="specification__name">Новости</label>
+                  <li class="filter-specifications__item">
+                    <input class="visually-hidden filter-specifications__check-box" id="news" type="checkbox" value="2" name="specifications-group" checked>
+                    <label for="news" class="filter-specifications__item-name">Новости</label>
                   </li>
-                  <li class="specification">
-                    <input class="visually-hidden specification__check-box" id="gallary" type="radio" name="specifications-group" checked>
-                    <label for="slider" class="specification__name">Галерея</label>
+                  <li class="filter-specifications__item">
+                    <input class="visually-hidden filter-specifications__check-box" id="gallary" type="checkbox" value="3" name="specifications-group" >
+                    <label for="gallary" class="filter-specifications__item-name">Галерея</label>
                   </li>
-                  <li class="specification">
-                    <input class="visually-hidden specification__check-box" id="cart" type="radio" name="specifications-group" checked>
-                    <label for="cart" class="specification__name">Корзина</label>
+                  <li class="filter-specifications__item">
+                    <input class="visually-hidden filter-specifications__check-box" id="cart" type="checkbox" value="4" name="specifications-group" >
+                    <label for="cart" class="filter-specifications__item-name">Корзина</label>
                   </li>
                 </ul>
               </fieldset>

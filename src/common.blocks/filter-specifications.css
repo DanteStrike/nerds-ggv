@@ -1,0 +1,84 @@
+.filter-specifications {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.filter-specifications__filter-title {
+  margin-bottom: 20px;
+}
+
+.filter-specifications__list {
+  width: 180px;
+  min-height: 105px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.filter-specifications__item {
+  width: inherit;
+  min-height: 23px;
+}
+
+.filter-specifications__item:not(:last-child) {
+  margin-bottom: 17px;
+}
+
+.filter-specifications__item-name {
+  position: relative;
+
+  display: block;
+  width: inherit;
+  margin: 0;
+  padding: 0;
+  padding-left: 36px;
+
+  line-height: 23px;
+  color: #283136;
+
+  cursor: pointer;
+}
+
+.filter-specifications__item-name:hover {
+  color: #000000;
+}
+
+.filter-specifications__check-box:disabled ~ .filter-specifications__item-name {
+  color: #283136;
+
+  cursor: default;
+  opacity: 0.3;
+}
+
+.filter-specifications__item-name::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  width: 23px;
+  height: 23px;
+
+  background: url("../img/sprite.svg") 0 0 no-repeat;
+  opacity: 0.4;
+}
+
+.filter-specifications__item-name:hover::before {
+  opacity: 0.68;
+}
+
+.filter-specifications__check-box:checked ~ .filter-specifications__item-name::before {
+  width: 27px;
+  height: 23px;
+
+  background: url("../img/sprite.svg") 31.506849315068493% 31.506849315068493% no-repeat;
+}
+
+.filter-specifications__check-box:disabled ~ .filter-specifications__item-name::before {
+  opacity: 0.3;
+}

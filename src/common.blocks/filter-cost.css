@@ -1,0 +1,49 @@
+.filter-cost {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.filter-cost__filter-title {
+  margin-bottom: 57px;
+}
+
+.filter-cost__range-slider {
+  margin-bottom: 14px;
+}
+
+.filter-cost__price {
+  display: flex;
+}
+
+.filter-cost__label {
+  display: block;
+  width: 32px;
+  min-height: 38px;
+  margin: 0;
+  padding: 0;
+
+  line-height: 38px;
+  text-align: left;
+}
+
+.filter-cost__input {
+  display: block;
+  width: 80px;
+  min-height: 38px;
+  margin: 0;
+  padding: 0;
+
+  line-height: 38px;
+  text-align: center;
+
+  background-color: #eeeeee;
+  border: 0;
+  border-radius: 3px;
+}
+
+.filter-cost--separator {
+  margin-right: 36px;
+}

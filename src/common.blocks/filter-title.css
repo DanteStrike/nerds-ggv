@@ -1,0 +1,11 @@
+.filter-title {
+  display: block;
+  width: 160px;
+  margin: 0;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
