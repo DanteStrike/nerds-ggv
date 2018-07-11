@@ -36,7 +36,7 @@
   width: 360px;
   height: 40px;
 
-  background-image: url(../img/browser.svg);
+  background-image: url("../img/browser.svg");
   opacity: 0.12;
 }
 
