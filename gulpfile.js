@@ -35,8 +35,10 @@ const jsMin = require('gulp-uglify');
 
 const imageMin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
+const svgSprite = require('gulp-svg-sprite');
 
 const runSequence = require('run-sequence');
+const rename = require('gulp-rename');
 const rimraf = require('rimraf');
 
 // Основыне пути
@@ -55,7 +57,8 @@ const path = {
     cssMain: 'src/css/',
     normoliz: 'node_modules/normalize.css/normalize.css',
     jsAll: 'src/common.blocks/*.js',
-    jsMain: 'src/js/main.js'
+    jsMain: 'src/js/main.js',
+    svgIcons: 'src/img/svgSprite/*.svg'
   },
   clean: './public'
 };
@@ -69,6 +72,16 @@ const config = {
   host: 'localhost',
   port: 9000,
   logPrefix: "Frontend_DevilDante"
+};
+
+const svgSpriteConfig = {
+  mode: {
+    css: { // Activate the «css» mode
+      render: {
+        css: true // Activate CSS output (with default options)
+      }
+    }
+  }
 };
 
 // HTML
@@ -128,6 +141,18 @@ gulp.task('image:public', function () {
 });
 
 //  Helpful tasks
+gulp.task('svgSpriteCreate', function () {
+  return gulp.src(path.src.svgIcons)
+  .pipe(svgSprite(svgSpriteConfig))
+  .pipe(gulp.dest('src/sprite'));
+});
+
+gulp.task('svgSprite', ['svgSpriteCreate'], function () {
+  return gulp.src('src/sprite/css/svg/sprite.css-03f10c0d.svg')
+  .pipe(rename('sprite.svg'))
+  .pipe(gulp.dest('src/img'));
+});
+
 gulp.task('clean', function (cb) {
   return rimraf(path.clean, cb);
 });

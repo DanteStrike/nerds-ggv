@@ -1,0 +1,18 @@
+.svg-radio-off {
+	background: url("svg/sprite.css-03f10c0d.svg") 0 0 no-repeat;
+}
+
+.svg-radio-off-dims {
+	width: 25px;
+	height: 25px;
+}
+
+.svg-radio-on {
+	background: url("svg/sprite.css-03f10c0d.svg") 100% 0 no-repeat;
+}
+
+.svg-radio-on-dims {
+	width: 25px;
+	height: 25px;
+}
+
