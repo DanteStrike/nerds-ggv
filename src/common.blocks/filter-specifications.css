@@ -82,3 +82,7 @@
 .filter-specifications__check-box:disabled ~ .filter-specifications__item-name::before {
   opacity: 0.3;
 }
+
+.filter-specifications__check-box:focus ~ .filter-specifications__item-name::before {
+  opacity: 0.68;
+}

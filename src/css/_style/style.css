@@ -450,6 +450,10 @@ img {
   opacity: 0.3;
 }
 
+.filter-meshes__radio-button:focus ~ .filter-meshes__item-name::before {
+  opacity: 0.68;
+}
+
 .filter-specifications {
   display: block;
   margin: 0;
@@ -533,6 +537,10 @@ img {
 
 .filter-specifications__check-box:disabled ~ .filter-specifications__item-name::before {
   opacity: 0.3;
+}
+
+.filter-specifications__check-box:focus ~ .filter-specifications__item-name::before {
+  opacity: 0.68;
 }
 
 .filters__form-filters {
@@ -936,6 +944,12 @@ img {
   background-color: #ffffff;
   border-radius: 50%;
   cursor: pointer;
+}
+
+#point1:focus ~ .slider__nav .slider__nav-button--1,
+#point2:focus ~ .slider__nav .slider__nav-button--2,
+#point3:focus ~ .slider__nav .slider__nav-button--3 {
+  box-shadow: 0 0 0 3px blue;
 }
 
 #point1:checked ~ .slider__nav .slider__nav-button--1::before,

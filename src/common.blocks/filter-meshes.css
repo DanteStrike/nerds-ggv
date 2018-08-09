@@ -79,3 +79,7 @@
 .filter-meshes__radio-button:disabled ~ .filter-meshes__item-name::before {
   opacity: 0.3;
 }
+
+.filter-meshes__radio-button:focus ~ .filter-meshes__item-name::before {
+  opacity: 0.68;
+}
