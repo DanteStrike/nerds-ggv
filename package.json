@@ -31,7 +31,7 @@
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-svg-sprite": "^1.4.0",
+    "gulp-svg-sprite": "^1.5.0",
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "^5.0.0",
     "normalize.css": "^8.0.0",
